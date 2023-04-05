@@ -9,6 +9,20 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Image Source="Assets/main_menu_blur.jpg" Stretch="Uniform"/>
+        <TextBlock x:Name="myTextBlock" Text="RADIANT SPARK" FontFamily="{StaticResource NHL_Ducks}" 
+            FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 50, 0, 0">
+            <Button Content="PLAY" FontFamily="{StaticResource NHL_Ducks}" FontSize="50" Margin="0, 20, 0, 20" 
+                    HorizontalAlignment="Center" Width="270"/>
+            <Button Content="SETTINGS" FontFamily="{StaticResource NHL_Ducks}" FontSize="50" Margin="0, 20, 0, 20" 
+                    HorizontalAlignment="Center" Width="270"/>
+            <Button Content="SHOP" FontFamily="{StaticResource NHL_Ducks}" FontSize="50" Margin="0, 20, 0, 20" 
+                    HorizontalAlignment="Center" Width="270"/>
+            <Button Content="CREDITS" FontFamily="{StaticResource NHL_Ducks}" FontSize="50" Margin="0, 20, 0, 20" 
+                    HorizontalAlignment="Center" Width="270"/>
+            <Button Content="EXIT" FontFamily="{StaticResource NHL_Ducks}" FontSize="50" Margin="0, 20, 0, 20" 
+                    HorizontalAlignment="Center" Width="270"/>
+        </StackPanel>
     </Grid>
 </Page>
