@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="RADIANT_SPARK.ChooseGame"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RADIANT_SPARK"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style x:Key="mainButton" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource NHL_Ducks}"/>
+            <Setter Property="FontSize" Value="65"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="SteelBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="0, 40, 0, 40"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Width" Value="400"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="Assets/choosegameBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Stretch="UniformToFill" Grid.RowSpan="2"/>
+        <TextBlock Text="CHOOSE GAME" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                FontSize="120" Foreground="FloralWhite"/>
+        
+        <StackPanel HorizontalAlignment="Center" Grid.Row="1">
+            <Button Content="NEW GAME" Style="{StaticResource mainButton}">
+                <Button.Background>
+                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
+                </Button.Background>
+            </Button>
+            <Button Content="LOAD GAME" Style="{StaticResource mainButton}">
+                <Button.Background>
+                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                Width="60" Height="40" Background="Transparent" Grid.Row="1">
+            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
+        </Button>
+    </Grid>
+</Page>
