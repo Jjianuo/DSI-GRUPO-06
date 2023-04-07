@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="RADIANT_SPARK.Credits"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RADIANT_SPARK"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="Assets/CreditsBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+               Stretch="UniformToFill" Grid.RowSpan="2"/>
+        <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                FontSize="120" Foreground="FloralWhite"/>
+
+        <StackPanel Grid.Row="1" Padding="40">
+            <TextBlock Text="MARÍA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                FontSize="80" Foreground="FloralWhite" Padding="40"/>
+            <TextBlock Text="JIANUO WEN HU" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                FontSize="80" Foreground="FloralWhite" Padding="40"/>
+        </StackPanel>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                Width="60" Height="40" Background="Transparent" Grid.Row="1">
+            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
+        </Button>
+    </Grid>
+</Page>

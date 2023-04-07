@@ -123,6 +123,9 @@
     <Compile Include="ChooseGame.xaml.cs">
       <DependentUpon>ChooseGame.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Credits.xaml.cs">
+      <DependentUpon>Credits.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\choosegameBG.png" />
+    <Content Include="Assets\CreditsBG.png" />
     <Content Include="Assets\main_menu.png" />
     <Content Include="Assets\main_menu_blur.jpg" />
     <Content Include="Assets\shopBG.png" />
@@ -156,6 +160,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="ChooseGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Credits.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
