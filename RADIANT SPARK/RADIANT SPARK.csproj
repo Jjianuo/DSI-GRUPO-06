@@ -133,6 +133,9 @@
     <Compile Include="Shop.xaml.cs">
       <DependentUpon>Shop.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TeamSelection.xaml.cs">
+      <DependentUpon>TeamSelection.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -145,6 +148,7 @@
     <Content Include="Assets\main_menu.png" />
     <Content Include="Assets\main_menu_blur.jpg" />
     <Content Include="Assets\shopBG.png" />
+    <Content Include="Assets\TeamSelectionBG.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -172,6 +176,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Shop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeamSelection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
