@@ -9,6 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Image Source="Assets/loading_screen.png" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Page>

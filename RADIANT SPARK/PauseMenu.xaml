@@ -9,6 +9,37 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Image Source="Assets/pause.jpg" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="myTextBlock" Text="PAUSE MENU" FontFamily="{StaticResource NHL_Ducks}" 
+            FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
+        <Rectangle HorizontalAlignment="Left" Fill="AliceBlue" Opacity="0.45" Height="1000" Width="150"/>
+        <StackPanel>
+            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="BackButton_Click">
+                <Viewbox>
+                    <SymbolIcon Symbol="Back" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Viewbox>
+            </Button>
+            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="MainMenu_Click">
+                <Viewbox>
+                    <SymbolIcon Symbol="Home" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Viewbox>
+            </Button>
+            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Shop_Click">
+                <Viewbox>
+                    <SymbolIcon Symbol="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Viewbox>
+            </Button>
+            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Settings_Click">
+                <Viewbox>
+                    <SymbolIcon Symbol="Setting" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Viewbox>
+            </Button>
+            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10">
+                <Viewbox>
+                    <SymbolIcon Symbol="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </Viewbox>
+            </Button>
+        </StackPanel>
     </Grid>
 </Page>

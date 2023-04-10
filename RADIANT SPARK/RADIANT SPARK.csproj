@@ -163,8 +163,10 @@
   <ItemGroup>
     <Content Include="Assets\choosegameBG.png" />
     <Content Include="Assets\CreditsBG.png" />
+    <Content Include="Assets\loading_screen.png" />
     <Content Include="Assets\main_menu.png" />
     <Content Include="Assets\main_menu_blur.jpg" />
+    <Content Include="Assets\pause.jpg" />
     <Content Include="Assets\shopBG.png" />
     <Content Include="Assets\story.jpg" />
     <Content Include="Assets\TeamSelectionBG.png" />
