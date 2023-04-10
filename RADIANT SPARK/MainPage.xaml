@@ -21,7 +21,7 @@
             <Setter Property="Margin" Value="0, 40, 0, 0"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Height" Value="100"/>
+            <Setter Property="Height" Value="80"/>
             <Setter Property="Width" Value="400"/>
             <Setter Property="ui:Effects.Shadow" Value="{StaticResource CommonShadow}"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -35,22 +35,22 @@
         <TextBlock x:Name="myTextBlock" Text="RADIANT SPARK" FontFamily="{StaticResource NHL_Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 50, 0, 0">
-            <Button Content="PLAY">
+            <Button Content="PLAY" Click="Play_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
             </Button>
-            <Button Content="SETTINGS">
+            <Button Content="SETTINGS" Click="Settings_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
             </Button>
-            <Button Content="SHOP">
+            <Button Content="SHOP" Click="Shop_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
             </Button>
-            <Button Content="CREDITS">
+            <Button Content="CREDITS" Click="Credits_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>

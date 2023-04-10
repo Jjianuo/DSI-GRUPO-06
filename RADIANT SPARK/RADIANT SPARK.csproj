@@ -126,12 +126,30 @@
     <Compile Include="Credits.xaml.cs">
       <DependentUpon>Credits.xaml</DependentUpon>
     </Compile>
+    <Compile Include="InGame.xaml.cs">
+      <DependentUpon>InGame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingScreen.xaml.cs">
+      <DependentUpon>LoadingScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MapSelection.xaml.cs">
+      <DependentUpon>MapSelection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PauseMenu.xaml.cs">
+      <DependentUpon>PauseMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Shop.xaml.cs">
       <DependentUpon>Shop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Story.xaml.cs">
+      <DependentUpon>Story.xaml</DependentUpon>
     </Compile>
     <Compile Include="TeamSelection.xaml.cs">
       <DependentUpon>TeamSelection.xaml</DependentUpon>
@@ -171,11 +189,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="InGame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoadingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="MapSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PauseMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Shop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Story.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

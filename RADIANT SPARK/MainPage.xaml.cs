@@ -26,5 +26,22 @@ namespace RADIANT_SPARK
         {
             this.InitializeComponent();
         }
+
+        private void Play_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ChooseGame));
+        }
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Settings));
+        }
+        private void Shop_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Shop));
+        }
+        private void Credits_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Credits));
+        }
     }
 }
