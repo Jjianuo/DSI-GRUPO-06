@@ -35,7 +35,7 @@
                     <SymbolIcon Symbol="Setting" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                 </Viewbox>
             </Button>
-            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10">
+            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Exit_Click">
                 <Viewbox>
                     <SymbolIcon Symbol="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                 </Viewbox>

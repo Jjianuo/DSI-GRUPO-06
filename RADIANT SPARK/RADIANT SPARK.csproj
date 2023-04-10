@@ -165,6 +165,7 @@
     <Content Include="Assets\CreditsBG.png" />
     <Content Include="Assets\loading_screen.png" />
     <Content Include="Assets\main_menu.png" />
+    <Content Include="Assets\main_menu_2.jpg" />
     <Content Include="Assets\main_menu_blur.jpg" />
     <Content Include="Assets\pause.jpg" />
     <Content Include="Assets\shopBG.png" />

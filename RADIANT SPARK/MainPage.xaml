@@ -30,7 +30,7 @@
     </Page.Resources>
 
     <Grid>
-        <Image Source="Assets/main_menu_blur.jpg" Stretch="UniformToFill" 
+        <Image Source="Assets/main_menu_2.jpg" Stretch="UniformToFill" 
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock x:Name="myTextBlock" Text="RADIANT SPARK" FontFamily="{StaticResource NHL_Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center"/>
@@ -55,7 +55,7 @@
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
             </Button>
-            <Button Content="EXIT" VerticalAlignment="Bottom">
+            <Button Content="EXIT" VerticalAlignment="Bottom" Click="Exit_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>

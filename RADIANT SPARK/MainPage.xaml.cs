@@ -43,5 +43,9 @@ namespace RADIANT_SPARK
         {
             Frame.Navigate(typeof(Credits));
         }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }
