@@ -9,6 +9,25 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Assets/story.jpg" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
+               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="myTextBlock" Text="STORY" FontFamily="{StaticResource NHL_Ducks}" 
+            FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="myText" TextWrapping="Wrap" FontFamily="{StaticResource Aboreto}" FontWeight="Bold"
+            FontSize="35" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" TextAlignment="Center">
+            In a distant future, five wise governors try to solve the society's population problems by suggesting the use of technological progress.
+            five great cores are created, distinguished by their job.
+            the divisions made between the citizens generate instability, so a group of conservative inhabitants rise up and create a whole new community based on a traditionalist and religious ideology.
+            this will start a violent confrontation between the two opposed  beliefs: ''the old world'' and ''the new world''.
+        </TextBlock>
     </Grid>
 </Page>

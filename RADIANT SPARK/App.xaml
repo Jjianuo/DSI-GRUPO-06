@@ -6,5 +6,6 @@
 
     <Application.Resources>
         <FontFamily x:Key="NHL_Ducks">pack://application:,,,/Fonts/#NHL Ducks</FontFamily>
+        <FontFamily x:Key="Aboreto">pack://application:,,,/Fonts/#Aboreto</FontFamily>
     </Application.Resources>
 </Application>
