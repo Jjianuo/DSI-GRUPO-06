@@ -27,6 +27,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="8*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,35 +35,37 @@
         </Grid.ColumnDefinitions>
 
         <Image Source="Assets/TeamSelectionBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
-               Stretch="UniformToFill" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <TextBlock Text="TEAM SELECTION" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
-                FontSize="120" Foreground="FloralWhite" Grid.ColumnSpan="2"/>
-        <StackPanel Grid.Row="1">
-            <Button Style="{StaticResource mainButton}" Height="500" Width="400" HorizontalAlignment="Center">
-                <Button.Background>
-                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
-                </Button.Background>
-                <Viewbox Margin="20">
-                    <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                </Viewbox>
-            </Button>
-            <TextBlock Text="OLD WORLD" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
-                FontSize="80" Foreground="FloralWhite" Padding="40"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" >
-            <Button Style="{StaticResource mainButton}" Height="500" Width="400" HorizontalAlignment="Center">
-                <Button.Background>
-                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
-                </Button.Background>
-                <Viewbox Margin="20">
-                    <SymbolIcon Symbol="OutlineStar" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                </Viewbox>
-            </Button>
-            <TextBlock Text="NEW WORLD" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
-                FontSize="80" Foreground="FloralWhite" Padding="40"/>
-        </StackPanel>
+               Stretch="UniformToFill" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
+        <Viewbox Grid.ColumnSpan="2">
+            <TextBlock Text="TEAM SELECTION" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                    FontSize="120" Foreground="FloralWhite" />
+        </Viewbox>
+        <Button Style="{StaticResource mainButton}" Height="500" Width="400" Grid.Row="1" HorizontalAlignment="Center">
+            <Button.Background>
+                <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
+            </Button.Background>
+            <Viewbox Margin="20">
+                <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Viewbox>
+        </Button>
+        <Button Style="{StaticResource mainButton}" Height="500" Width="400" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1">
+            <Button.Background>
+                <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
+            </Button.Background>
+            <Viewbox Margin="20">
+                <SymbolIcon Symbol="OutlineStar" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Viewbox>
+        </Button>
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <TextBlock Text="NEW WORLD" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+            FontSize="80" Foreground="FloralWhite" Padding="40"/>
+        </Viewbox>
+        <Viewbox Grid.Column="0" Grid.Row="2">
+            <TextBlock Text="OLD WORLD" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+            FontSize="80" Foreground="FloralWhite" Padding="40" Grid.Column="0" Grid.Row="2"/>
+        </Viewbox>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="1">
+                Width="60" Height="40" Background="Transparent" Grid.Row="2">
             <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
         </Button>
     </Grid>

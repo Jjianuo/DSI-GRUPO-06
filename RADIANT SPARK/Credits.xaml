@@ -16,15 +16,19 @@
 
         <Image Source="Assets/characterSelectionBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="2"/>
-        <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
-                FontSize="120" Foreground="FloralWhite"/>
+        <Viewbox>
+            <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                       FontSize="120" Foreground="FloralWhite"/>
+        </Viewbox>
 
-        <StackPanel Grid.Row="1" Padding="40">
-            <TextBlock Text="MARÍA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+        <Viewbox Grid.Row="1" >
+            <StackPanel Padding="40">
+                <TextBlock Text="MARÍA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
-            <TextBlock Text="JIANUO WEN HU" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                <TextBlock Text="JIANUO WEN HU" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
-        </StackPanel>
+            </StackPanel>
+        </Viewbox>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
                 Width="60" Height="40" Background="Transparent" Grid.Row="1">
             <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>

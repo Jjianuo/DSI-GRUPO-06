@@ -16,10 +16,8 @@
             <Setter Property="Background" Value="SteelBlue"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Margin" Value="0, 40, 0, 40"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Height" Value="100"/>
-            <Setter Property="Width" Value="400"/>
         </Style>
     </Page.Resources>
 
@@ -28,13 +26,20 @@
             <RowDefinition Height="2*"/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         
         <Image Source="Assets/choosegameBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
-               Stretch="UniformToFill" Grid.RowSpan="2"/>
-        <TextBlock Text="CHOOSE GAME" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
-                FontSize="120" Foreground="FloralWhite"/>
+               Stretch="UniformToFill" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
+        <Viewbox Grid.ColumnSpan="3">
+            <TextBlock Text="CHOOSE GAME" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}" 
+                       FontSize="120" Foreground="FloralWhite" />
+        </Viewbox>
         
-        <StackPanel HorizontalAlignment="Center" Grid.Row="1">
+        <StackPanel HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1">
             <Button Content="NEW GAME" Style="{StaticResource mainButton}">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>

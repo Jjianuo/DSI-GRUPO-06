@@ -15,9 +15,11 @@
         </Grid.RowDefinitions>
         <Image Source="Assets\shopBG.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"
                Grid.RowSpan="2"/>
-        <TextBlock Text="SHOP" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+        <Viewbox>
+            <TextBlock Text="SHOP" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
                 FontSize="80" Foreground="FloralWhite"/>
-        <GridView ItemsSource="{x:Bind ViewModel.Activeitems}" Margin="40,0,40,40" Grid.Row="1">
+        </Viewbox>
+        <GridView ItemsSource="{x:Bind ViewModel.Activeitems}" Margin="40,0,40,40" Grid.Row="1" IsItemClickEnabled="True">
             <GridView.ItemTemplate>
                 <DataTemplate x:Name="ImageTextDataTemplate" x:DataType="local:ActiveItem" >
                     <StackPanel Height="280" Width="180" Margin="12" 
