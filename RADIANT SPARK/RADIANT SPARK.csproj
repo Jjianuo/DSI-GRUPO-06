@@ -168,7 +168,9 @@
     <Content Include="Assets\main_menu_2.jpg" />
     <Content Include="Assets\main_menu_blur.jpg" />
     <Content Include="Assets\pause.jpg" />
+    <Content Include="Assets\profile.png" />
     <Content Include="Assets\shopBG.png" />
+    <Content Include="Assets\squares.png" />
     <Content Include="Assets\story.jpg" />
     <Content Include="Assets\TeamSelectionBG.png" />
     <Content Include="Properties\Default.rd.xml" />

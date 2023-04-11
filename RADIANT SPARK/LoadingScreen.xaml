@@ -11,6 +11,10 @@
     <Grid>
         <Image Source="Assets/loading_screen.png" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1480">
+            <TextBlock Text="LOADING..." FontFamily="{StaticResource NHL_Ducks}" 
+            FontSize="50" Foreground="AliceBlue" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <ProgressBar Margin="20, 20, 20, 20" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1400"/>
+        </StackPanel>
     </Grid>
 </Page>
