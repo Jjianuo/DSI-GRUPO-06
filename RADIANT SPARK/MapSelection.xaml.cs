@@ -40,5 +40,9 @@ namespace RADIANT_SPARK
             }
             return false;
         }
+        private void CharacterSelect_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CharacterSelection));
+        }
     }
 }

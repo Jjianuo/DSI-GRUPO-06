@@ -38,7 +38,7 @@
         <TextBlock x:Name="myTextBlock" Text="MAP SELECTION" FontFamily="{StaticResource NHL_Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
         <StackPanel Grid.Row="1">
-            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center">
+            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
@@ -50,7 +50,7 @@
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" >
-            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center">
+            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
@@ -62,7 +62,7 @@
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2" >
-            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center">
+            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
