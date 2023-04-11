@@ -26,5 +26,13 @@ namespace RADIANT_SPARK
         {
             this.InitializeComponent();
         }
+        private void Pause_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PauseMenu));
+        }
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Settings));
+        }
     }
 }

@@ -12,13 +12,14 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="AUto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="3"
+        <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="4"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <StackPanel Orientation="Horizontal">
+        <Grid>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Button Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Pause_Click">
                     <Button.Background>
                         <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
                     </Button.Background>
@@ -27,7 +28,15 @@
                     </Viewbox>
                 </Button>
             </StackPanel>
-            <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal">
+            <StackPanel Grid.Row="0" HorizontalAlignment="Right" Orientation="Horizontal">
+                <Button Height="100" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Button.Background>
+                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
+                    </Button.Background>
+                    <Viewbox>
+                        <SymbolIcon Symbol="People" Foreground="SteelBlue"/>
+                    </Viewbox>
+                </Button>
                 <Button Height="100" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top">
                     <Button.Background>
                         <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
@@ -44,7 +53,7 @@
                         <SymbolIcon Symbol="Message" Foreground="SteelBlue"/>
                     </Viewbox>
                 </Button>
-                <Button Height="100" Width="100" HorizontalAlignment="Right" >
+                <Button Height="100" Width="100" HorizontalAlignment="Right" Click="Settings_Click">
                     <Button.Background>
                         <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
                     </Button.Background>
@@ -53,24 +62,49 @@
                     </Viewbox>
                 </Button>
             </StackPanel>
-        </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal">
-            <Image Grid.Row="2" Source="Assets/pause.jpg" Height="200" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
-            <TextBlock TextWrapping="Wrap" FontFamily="{StaticResource Aboreto}" FontWeight="Bold" Grid.Row="2"
-            FontSize="35" Foreground="SteelBlue"  HorizontalAlignment="Right" TextAlignment="Center" Margin="20, 40, 20, 20">
-            HP: 30   SPD: 30 <LineBreak/> ATK: 5   ION: 10 <LineBreak/> DEF: 2   RES: 2
-            </TextBlock>
-            <Image Grid.Row="2" Source="Assets/profile.png" Height="250" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Left">
-            <Button Height="100" Width="100" HorizontalAlignment="Right" >
-                <Button.Background>
-                    <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
-                </Button.Background>
-                <Viewbox>
-                    <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
-                </Viewbox>
-            </Button>
-        </StackPanel>
+        </Grid>
+        <Grid Grid.Row="3">
+            <PersonPicture ProfilePicture="Assets/map2.png" Height="240" Width="240" HorizontalAlignment="Left" Margin="10, 0, 0, 10"/>
+            <Grid HorizontalAlignment="Right">
+                <Rectangle HorizontalAlignment="Right" Fill="WhiteSmoke" Opacity="0.80" Height="250" Width="600"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock TextWrapping="Wrap" FontFamily="{StaticResource Aboreto}" FontWeight="Bold"
+                    FontSize="35" Foreground="SteelBlue"  HorizontalAlignment="Right" TextAlignment="Center" Margin="20, 60, 20, 20">
+                    · HP: 30 · SPD: 30 <LineBreak/> · ATK: 5 · ION: 10 <LineBreak/> · DEF: 2 · RES: 2
+                    </TextBlock>
+                    <Image Source="Assets/profile.png" Height="250" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <TextBlock Text="ACTIVE ITEMS" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL_Ducks}"
+                Foreground="SteelBlue" Margin="0,0,20,0"/>
+        <Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+            <StackPanel Orientation="Horizontal">
+                <Button Height="100" Width="100" HorizontalAlignment="Right" >
+                    <Button.Background>
+                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
+                    </Button.Background>
+                    <Viewbox>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
+                    </Viewbox>
+                </Button>
+                <Button Height="100" Width="100" HorizontalAlignment="Right" >
+                    <Button.Background>
+                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
+                    </Button.Background>
+                    <Viewbox>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
+                    </Viewbox>
+                </Button>
+                <Button Height="100" Width="100" HorizontalAlignment="Right" >
+                    <Button.Background>
+                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
+                    </Button.Background>
+                    <Viewbox>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
+                    </Viewbox>
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>
