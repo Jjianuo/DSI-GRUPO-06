@@ -14,7 +14,7 @@
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
 
-        <Image Source="Assets/CreditsBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+        <Image Source="Assets/characterSelectionBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="2"/>
         <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
                 FontSize="120" Foreground="FloralWhite"/>

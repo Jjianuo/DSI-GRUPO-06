@@ -42,7 +42,7 @@
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
-                <Viewbox>
+                <Viewbox Margin="20">
                     <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Viewbox>
             </Button>
@@ -54,7 +54,7 @@
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
-                <Viewbox>
+                <Viewbox Margin="20">
                     <SymbolIcon Symbol="OutlineStar" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Viewbox>
             </Button>

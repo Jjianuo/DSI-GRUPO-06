@@ -20,16 +20,11 @@ namespace RADIANT_SPARK
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Credits : Page
+    public sealed partial class CharacterSelection : Page
     {
-        public Credits()
+        public CharacterSelection()
         {
             this.InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
