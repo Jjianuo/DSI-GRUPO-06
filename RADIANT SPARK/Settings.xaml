@@ -281,5 +281,9 @@
                 <x:String>English</x:String>
             </ComboBox>
         </Viewbox>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                Width="60" Height="40" Background="Transparent" Grid.Row="9">
+            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
+        </Button>
     </Grid>
 </Page>
