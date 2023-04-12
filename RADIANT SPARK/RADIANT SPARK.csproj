@@ -175,6 +175,7 @@
     <Content Include="Assets\map2.png" />
     <Content Include="Assets\pause.jpg" />
     <Content Include="Assets\profile.png" />
+    <Content Include="Assets\settingBG.png" />
     <Content Include="Assets\shopBG.png" />
     <Content Include="Assets\squares.png" />
     <Content Include="Assets\story.jpg" />

@@ -29,5 +29,34 @@ namespace RADIANT_SPARK
         }
 
         public ActiveItemsViewModel ViewModel { get; set; }
+
+        private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
+        {
+            var option = ((MenuFlyoutItem)sender).Tag.ToString();
+
+            if (option == "all")
+            {
+                var SortResult = this.ViewModel.Activeitems.OrderBy(a => a.ItemName);
+                mygridview.ItemsSource = SortResult;
+            }
+            else if (option == "alphabet")
+            {
+                var SortResult = this.ViewModel.Activeitems.OrderBy(a => a.ItemName);
+                mygridview.ItemsSource = SortResult;
+
+            }
+            else if (option == "type")
+            {
+                var SortResult = this.ViewModel.Activeitems.OrderBy(a => a.ItemType);
+                mygridview.ItemsSource = SortResult;
+
+            }
+            else if (option == "price")
+            {
+                var SortResult = this.ViewModel.Activeitems.OrderBy(a => a.Price);
+                mygridview.ItemsSource = SortResult;
+
+            }
+        }
     }
 }

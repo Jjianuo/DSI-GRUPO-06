@@ -9,21 +9,20 @@ namespace RADIANT_SPARK
 {
     public class ActiveItem
     {
-        public string ArtistName { get; set; }
-        public string CompositionName { get; set; }
-        public DateTime ReleaseDateTime { get; set; }
+        public string ItemName { get; set; }
+        public string ItemType { get; set; }
+        public int Price { get; set; }
         public ActiveItem()
         {
-            this.ArtistName = "Wolfgang Amadeus Mozart";
-            this.CompositionName = "Andante in C for Piano";
-            this.ReleaseDateTime = new DateTime(1761, 1, 1);
+            this.ItemName = "Flamethrower";
+            this.ItemType = "Equippable";
+            this.Price = 10;
         }
         public string OneLineSummary
         {
             get
             {
-                return $"{this.CompositionName} by {this.ArtistName}, released: "
-                    + this.ReleaseDateTime.ToString("d");
+                return $"{this.ItemType}, {this.ItemName}";
             }
         }
     }
@@ -39,129 +38,129 @@ namespace RADIANT_SPARK
         {
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "Johann Sebastian Bach",
-                CompositionName = "Mass in B minor",
-                ReleaseDateTime = new DateTime(1748, 7, 8)
+                ItemName = "Bucket",
+                ItemType = "Equippable",
+                Price = 92
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "Ludwig van Beethoven",
-                CompositionName = "Third Symphony",
-                ReleaseDateTime = new DateTime(1805, 2, 11)
+                ItemName = "Earthquake",
+                ItemType = "Terrain",
+                Price = 10
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "HP potion",
+                ItemType = "Consumable",
+                Price = 7
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "HP boost",
+                ItemType = "Consumable",
+                Price = 56
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Bird",
+                ItemType = "Summon",
+                Price = 36
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Bear",
+                ItemType = "Summon",
+                Price = 75
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Bottle",
+                ItemType = "Consumable",
+                Price = 81
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Lollipop",
+                ItemType = "Consumable",
+                Price = 46
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Cat",
+                ItemType = "Summon",
+                Price = 60
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Mythic sword",
+                ItemType = "Equippable",
+                Price = 38
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Laptop",
+                ItemType = "Equippable",
+                Price = 16
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Holy water",
+                ItemType = "Consumable",
+                Price = 9
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "S8nic bible",
+                ItemType = "Consumable",
+                Price = 686
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Archangel's halo",
+                ItemType = "Consumable",
+                Price = 7
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "Orca",
+                ItemType = "Summon",
+                Price = 16
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "George Frideric Handel",
+                ItemType = "Serse",
+                Price = 9
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "George Frideric Handel",
+                ItemType = "Serse",
+                Price = 9
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "George Frideric Handel",
+                ItemType = "Serse",
+                Price = 9
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "George Frideric Handel",
+                ItemType = "Serse",
+                Price = 9
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "George Frideric Handel",
+                ItemType = "Serse",
+                Price = 9
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ArtistName = "George Frideric Handel",
-                CompositionName = "Serse",
-                ReleaseDateTime = new DateTime(1737, 12, 3)
+                ItemName = "George Frideric Handel",
+                ItemType = "Serse",
+                Price = 9
             });
         }
     }
