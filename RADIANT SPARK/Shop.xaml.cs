@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,12 +21,22 @@ namespace RADIANT_SPARK
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Shop : Page
+    public sealed partial class Shop : Page, INotifyPropertyChanged
     {
+        string popupTitle;
+        string popupText;
+        string popupPrice;
+        string moneyText;
+        int money;
+        ActiveItem lastClicked;
+        public event PropertyChangedEventHandler PropertyChanged;
         public Shop()
         {
             this.InitializeComponent();
             this.ViewModel = new ActiveItemsViewModel();
+
+            money = 666;
+            moneyText = "Current money: " + money.ToString() + "$";
         }
 
         public ActiveItemsViewModel ViewModel { get; set; }
@@ -34,12 +45,8 @@ namespace RADIANT_SPARK
         {
             var option = ((MenuFlyoutItem)sender).Tag.ToString();
 
-            if (option == "all")
-            {
-                var SortResult = this.ViewModel.Activeitems.OrderBy(a => a.ItemName);
-                mygridview.ItemsSource = SortResult;
-            }
-            else if (option == "alphabet")
+
+            if (option == "alphabet")
             {
                 var SortResult = this.ViewModel.Activeitems.OrderBy(a => a.ItemName);
                 mygridview.ItemsSource = SortResult;
@@ -57,6 +64,42 @@ namespace RADIANT_SPARK
                 mygridview.ItemsSource = SortResult;
 
             }
+        }
+        public interface INotifyPropertyChanged
+        {
+            event PropertyChangedEventHandler PropertyChanged;
+        }
+
+        private void mygridview_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ActiveItem ai = e.ClickedItem as ActiveItem;
+            lastClicked = ai;
+
+            standardPopup.VerticalOffset = -200;
+            standardPopup.HorizontalOffset = -200;
+            popupTitle = ai.ItemName;
+            popupText = ai.OneLineSummary;
+            popupPrice = "Price: " + ai.Price.ToString() + "$";
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(popupTitle)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(popupText)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(popupPrice)));
+            standardPopup.IsOpen = !standardPopup.IsOpen;
+
+            int newMoney = money - lastClicked.Price;
+            if (newMoney < 0)
+            {
+                popupButton.IsEnabled = false;
+            }
+            else popupButton.IsEnabled = true;
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            money -= lastClicked.Price;
+            moneyText = "Current money: " + money.ToString() + "$";
+
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(moneyText)));
         }
     }
 }

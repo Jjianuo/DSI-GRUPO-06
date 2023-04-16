@@ -16,6 +16,10 @@
         </Grid.RowDefinitions>
         <Image Source="Assets\shopBG.png" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"
                Grid.RowSpan="3"/>
+        <Viewbox Grid.Row="1" HorizontalAlignment="Left" Margin="20,0,0,0">
+            <TextBlock Text="{x:Bind moneyText, Mode=OneWay}" Style="{ThemeResource CaptionTextBlockStyle}" 
+                       Foreground="FloralWhite"/>
+        </Viewbox>
         <Viewbox>
             <TextBlock Text="SHOP" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
                 FontSize="80" Foreground="FloralWhite"/>
@@ -24,7 +28,6 @@
             <DropDownButton Content="Sort">
                 <DropDownButton.Flyout>
                     <MenuFlyout x:Name="mydrop">
-                        <MenuFlyoutItem Text="All" Click="MenuFlyoutItem_Click" Tag="all"/>
                         <MenuFlyoutItem Text="Alphabetic" Click="MenuFlyoutItem_Click" Tag="alphabet"/>
                         <MenuFlyoutItem Text="Type" Click="MenuFlyoutItem_Click" Tag="type"/>
                         <MenuFlyoutItem Text="Price" Click="MenuFlyoutItem_Click" Tag="price"/>
@@ -33,7 +36,8 @@
             </DropDownButton>
             
         </Viewbox>
-        <GridView ItemsSource="{x:Bind ViewModel.Activeitems}" Margin="40,0,40,40" Grid.Row="2" IsItemClickEnabled="True" x:Name="mygridview">
+        <GridView ItemsSource="{x:Bind ViewModel.Activeitems}" Margin="40,0,40,40" Grid.Row="2" IsItemClickEnabled="True"
+                  x:Name="mygridview" ItemClick="mygridview_ItemClick">
             <GridView.ItemTemplate>
                 <DataTemplate x:Name="ImageTextDataTemplate" x:DataType="local:ActiveItem" >
                     <StackPanel Height="280" Width="180" Margin="12" 
@@ -56,6 +60,28 @@
                 </ItemsPanelTemplate>
             </GridView.ItemsPanel>
         </GridView>
+        <Popup x:Name="standardPopup" 
+               Visibility="Visible" Grid.Row="2" IsLightDismissEnabled="True"
+               VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2" Width="400" Height="400">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="Margin" Value="10"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <TextBlock Text="{x:Bind popupTitle, Mode=OneWay}" 
+                               FontSize="24.667" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Bind popupText, Mode=OneWay}" 
+                               FontSize="24.667" HorizontalAlignment="Center"/>
+                    <TextBlock Text="{x:Bind popupPrice, Mode=OneWay}" 
+                               FontSize="24.667" HorizontalAlignment="Center"/>
+                    <Button x:Name="popupButton" Content="Buy" HorizontalAlignment="Center" Margin="10" Click="Button_Click"/>
+                </StackPanel>
+            </Border>
+        </Popup>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
                 Width="60" Height="40" Background="Transparent" Grid.Row="2">
             <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>

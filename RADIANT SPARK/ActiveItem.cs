@@ -22,7 +22,7 @@ namespace RADIANT_SPARK
         {
             get
             {
-                return $"{this.ItemType}, {this.ItemName}";
+                return $"{this.ItemName} is a {this.ItemType} item";
             }
         }
     }
@@ -128,39 +128,39 @@ namespace RADIANT_SPARK
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ItemName = "George Frideric Handel",
-                ItemType = "Serse",
-                Price = 9
+                ItemName = "AK-47",
+                ItemType = "Equippable",
+                Price = 47
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ItemName = "George Frideric Handel",
-                ItemType = "Serse",
-                Price = 9
+                ItemName = "Balls",
+                ItemType = "Summon",
+                Price = 69
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ItemName = "George Frideric Handel",
-                ItemType = "Serse",
-                Price = 9
+                ItemName = "OPPA",
+                ItemType = "Summon",
+                Price = 369
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ItemName = "George Frideric Handel",
-                ItemType = "Serse",
-                Price = 9
+                ItemName = "i-phone 2394",
+                ItemType = "Consumable",
+                Price = 999999999            
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ItemName = "George Frideric Handel",
-                ItemType = "Serse",
-                Price = 9
+                ItemName = "Die",
+                ItemType = "Consumable",
+                Price = -5
             });
             this.activeitems.Add(new ActiveItem()
             {
-                ItemName = "George Frideric Handel",
-                ItemType = "Serse",
-                Price = 9
+                ItemName = "Batchest",
+                ItemType = "Summon",
+                Price = 2120
             });
         }
     }
