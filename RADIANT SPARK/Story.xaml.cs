@@ -26,11 +26,44 @@ namespace RADIANT_SPARK
         public Story()
         {
             this.InitializeComponent();
+            DispatcherTimerSetup();
         }
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             Frame.Navigate(typeof(TeamSelection));
+        }
+
+        DispatcherTimer dispatcherTimer;
+        DateTimeOffset startTime;
+        DateTimeOffset lastTime;
+        DateTimeOffset stopTime;
+        int timesTicked = 1;
+        int timesToTick = 5;
+
+        public void DispatcherTimerSetup()
+        {
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += dispatcherTimer_Tick;
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 1);
+            startTime = DateTimeOffset.Now;
+            lastTime = startTime;
+            dispatcherTimer.Start();
+        }
+
+        void dispatcherTimer_Tick(object sender, object e)
+        {
+            DateTimeOffset time = DateTimeOffset.Now;
+            TimeSpan span = time - lastTime;
+            lastTime = time;
+            timesTicked++;
+            if (timesTicked > timesToTick)
+            {
+                Continue.Visibility = Visibility.Visible;
+                stopTime = time;
+                dispatcherTimer.Stop();
+                span = stopTime - startTime;
+            }
         }
     }
 }

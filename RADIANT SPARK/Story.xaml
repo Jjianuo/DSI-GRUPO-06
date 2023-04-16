@@ -30,8 +30,8 @@
             the divisions made between the citizens generate instability, so a group of conservative inhabitants rise up and create a whole new community based on a traditionalist and religious ideology.
             this will start a violent confrontation between the two opposed  beliefs: ''the old world'' and ''the new world''.
         </TextBlock>
-        <TextBlock Text="PRESS ANY KEY TO CONTINUE" FontFamily="{StaticResource NHL_Ducks}" 
-            FontSize="90" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
-        <ScrollViewer IsTabStop="True"/>
+        <TextBlock x:Name="Continue" Text="PRESS ANY KEY TO CONTINUE" FontFamily="{StaticResource NHL_Ducks}"
+            FontSize="90" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Visibility="Collapsed"/>
+        <ScrollViewer IsTabStop="True" Width="10000" Height="1000" Grid.RowSpan="3" Grid.ColumnSpan="3" FocusVisualMargin="-6"/>
     </Grid>
 </Page>
