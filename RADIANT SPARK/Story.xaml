@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid KeyDown="Grid_KeyDown">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -32,5 +32,6 @@
         </TextBlock>
         <TextBlock Text="PRESS ANY KEY TO CONTINUE" FontFamily="{StaticResource NHL_Ducks}" 
             FontSize="90" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+        <ScrollViewer IsTabStop="True"/>
     </Grid>
 </Page>
