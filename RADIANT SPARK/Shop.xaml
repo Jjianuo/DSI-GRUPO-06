@@ -63,9 +63,9 @@
         <Popup x:Name="standardPopup" 
                Visibility="Visible" Grid.Row="2" IsLightDismissEnabled="True"
                VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+            <Border BorderBrush="Cyan" 
                 Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
-                BorderThickness="2" Width="400" Height="400">
+                BorderThickness="2" Width="400" Height="400" CornerRadius="20">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel.Resources>
                         <Style TargetType="TextBox">
@@ -78,7 +78,10 @@
                                FontSize="24.667" HorizontalAlignment="Center"/>
                     <TextBlock Text="{x:Bind popupPrice, Mode=OneWay}" 
                                FontSize="24.667" HorizontalAlignment="Center"/>
-                    <Button x:Name="popupButton" Content="Buy" HorizontalAlignment="Center" Margin="10" Click="Button_Click"/>
+                    <Button x:Name="popupButton" Content="Buy" HorizontalAlignment="Center" Margin="10" Click="Button_Click"
+                            CornerRadius="10"/>
+                    <TextBlock x:Name="notEnoughPopup" Foreground="Red" Text="Not enough credits" Visibility="Collapsed"
+                               FontSize="24.667" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Border>
         </Popup>

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -36,7 +37,7 @@ namespace RADIANT_SPARK
             this.ViewModel = new ActiveItemsViewModel();
 
             money = 666;
-            moneyText = "Current money: " + money.ToString() + "$";
+            moneyText = "Current credits: " + money.ToString() + "$";
         }
 
         public ActiveItemsViewModel ViewModel { get; set; }
@@ -89,17 +90,27 @@ namespace RADIANT_SPARK
             if (newMoney < 0)
             {
                 popupButton.IsEnabled = false;
+                notEnoughPopup.Visibility = Visibility.Visible;
             }
-            else popupButton.IsEnabled = true;
+            else
+            {
+                popupButton.IsEnabled = true;
+                notEnoughPopup.Visibility = Visibility.Collapsed;
+            }
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             money -= lastClicked.Price;
-            moneyText = "Current money: " + money.ToString() + "$";
+            moneyText = "Current credits: " + money.ToString() + "$";
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(moneyText)));
+
+            if(lastClicked.ItemName == "Die")
+            {
+                CoreApplication.Exit();
+            }
         }
     }
 }
