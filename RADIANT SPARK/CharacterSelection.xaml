@@ -32,6 +32,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="8*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -43,10 +44,11 @@
         </Grid.ColumnDefinitions>
 
         <Image Source="Assets/creditsBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
-               Stretch="UniformToFill" Grid.RowSpan="3" Grid.ColumnSpan="5"/>
+               Stretch="UniformToFill" Grid.RowSpan="4" Grid.ColumnSpan="5"/>
         <TextBlock Text="CHARACTER SELECTION" Grid.ColumnSpan="9"/>
     
-        <Button Style="{StaticResource mainButton}" Grid.Row="1" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom">
+        <Button Style="{StaticResource mainButton}" Grid.Row="1" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom"
+                Click="Button_Click">
             <Button.Background>
                 <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
             </Button.Background>
@@ -54,7 +56,8 @@
                 <SymbolIcon Symbol="ShowResults" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Viewbox>
         </Button>
-        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom">
+        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom"
+                Click="Button_Click">
             <Button.Background>
                 <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
             </Button.Background>
@@ -62,7 +65,8 @@
                 <SymbolIcon Symbol="Audio" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Viewbox>
         </Button>
-        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom">
+        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom"
+                Click="Button_Click">
             <Button.Background>
                 <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
             </Button.Background>
@@ -70,7 +74,8 @@
                 <SymbolIcon Symbol="BlockContact" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Viewbox>
         </Button>
-        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom">
+        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom"
+                Click="Button_Click">
             <Button.Background>
                 <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
             </Button.Background>
@@ -78,7 +83,8 @@
                 <SymbolIcon Symbol="Globe" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Viewbox>
         </Button>
-        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom">
+        <Button Style="{StaticResource mainButton}" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Bottom"
+                Click="Button_Click">
             <Button.Background>
                 <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
             </Button.Background>
@@ -101,9 +107,8 @@
         <Viewbox Grid.Row="2" Grid.Column="4" VerticalAlignment="Top">
             <TextBlock Text="Peace" FontSize="80" Margin="20"/>
         </Viewbox>
-        <Button VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="5">
-            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
-        </Button>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                Width="60" Height="40" Background="Transparent" Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                Foreground="White" ToolTipService.ToolTip="Back" Grid.Row="5" Click="Back_click"/>
     </Grid>
 </Page>

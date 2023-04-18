@@ -7,5 +7,6 @@
     <Application.Resources>
         <FontFamily x:Key="NHL_Ducks">pack://application:,,,/Fonts/#NHL Ducks</FontFamily>
         <FontFamily x:Key="Aboreto">pack://application:,,,/Fonts/#Aboreto</FontFamily>
+        <MediaPlayerElement x:Key="ClickSound" Source="ms-appx:///Sound/Bleep_07.wav" AutoPlay="False"/>
     </Application.Resources>
 </Application>

@@ -86,8 +86,8 @@
             </Border>
         </Popup>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="2">
-            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
+                Width="60" Height="40" Background="Transparent" Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                Foreground="White" Click="Back_click" ToolTipService.ToolTip="Back" Grid.Row="2">
         </Button>
     </Grid>
 </Page>

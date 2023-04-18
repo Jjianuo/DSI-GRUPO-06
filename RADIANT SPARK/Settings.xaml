@@ -255,13 +255,13 @@
         <Viewbox  Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
             <TextBlock Text="Music volume" FontSize="60"/>
         </Viewbox>
-        <Slider Style="{StaticResource ThickerSlider}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" TickFrequency="20" TickPlacement="Inline" Orientation="Horizontal" 
-        Maximum="100" Minimum="0" Value="50"/>
+        <Slider x:Name="MusicSlider" Style="{StaticResource ThickerSlider}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" TickFrequency="20" TickPlacement="Inline" Orientation="Horizontal" 
+            Maximum="100" Minimum="0" Value="50" ValueChanged="MusicSlider_ValueChanged"/>
         <Viewbox  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
             <TextBlock Text="Sound volume" FontSize="60"/>
         </Viewbox>
-        <Slider Style="{StaticResource ThickerSlider}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" TickFrequency="20" TickPlacement="Inline" Orientation="Horizontal" 
-        Maximum="100" Minimum="0" Value="50" Foreground="White"/>
+        <Slider x:Name="SoundSlider" Style="{StaticResource ThickerSlider}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" TickFrequency="20" TickPlacement="Inline" Orientation="Horizontal" 
+            Maximum="100" Minimum="0" Value="50" Foreground="White" ValueChanged="SoundSlider_ValueChanged"/>
         <Viewbox Grid.Row="6" Grid.Column="1" VerticalAlignment="Bottom">
             <TextBlock Text="Resolution" FontSize="60"/>
         </Viewbox>
@@ -282,8 +282,7 @@
             </ComboBox>
         </Viewbox>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="9">
-            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
-        </Button>
+                Width="60" Height="40" Background="Transparent" Grid.Row="7" Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                Foreground="White" ToolTipService.ToolTip="Back" Click="Back_Click"/>
     </Grid>
 </Page>

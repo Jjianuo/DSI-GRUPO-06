@@ -28,17 +28,7 @@ namespace RADIANT_SPARK
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            TryGoBack();
-        }
-        public static bool TryGoBack()
-        {
-            Frame rootFrame = Window.Current.Content as Frame;
-            if (rootFrame.CanGoBack)
-            {
-                rootFrame.GoBack();
-                return true;
-            }
-            return false;
+            App.TryGoBack();
         }
         private void MainMenu_Click(object sender, RoutedEventArgs e)
         {

@@ -26,5 +26,20 @@ namespace RADIANT_SPARK
         {
             this.InitializeComponent();
         }
+
+        private void Back_click(object sender, RoutedEventArgs e)
+        {
+            App.TryGoBack();
+        }
+
+        private void Oldworld_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoadingScreen));
+        }
+
+        private void Newworld_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CharacterSelection));
+        }
     }
 }

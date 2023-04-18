@@ -38,5 +38,24 @@ namespace RADIANT_SPARK
         {
             this.InitializeComponent();
         }
+
+        private void MusicSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            Slider slider = sender as Slider;
+            if (slider != null)
+            {
+                //media.Volume = slider.Value;
+            }
+        }
+
+        private void SoundSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            App.TryGoBack();
+        }
     }
 }

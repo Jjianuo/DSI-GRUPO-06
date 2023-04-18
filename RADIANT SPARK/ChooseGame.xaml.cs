@@ -26,5 +26,15 @@ namespace RADIANT_SPARK
         {
             this.InitializeComponent();
         }
+
+        private void Back_click(object sender, RoutedEventArgs e)
+        {
+            App.TryGoBack();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(TeamSelection));
+        }
     }
 }

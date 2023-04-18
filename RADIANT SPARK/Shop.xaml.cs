@@ -112,5 +112,10 @@ namespace RADIANT_SPARK
                 CoreApplication.Exit();
             }
         }
+
+        private void Back_click(object sender, RoutedEventArgs e)
+        {
+            App.TryGoBack();
+        }
     }
 }

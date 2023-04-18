@@ -65,5 +65,10 @@ namespace RADIANT_SPARK
                 span = stopTime - startTime;
             }
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            App.TryGoBack();
+        }
     }
 }

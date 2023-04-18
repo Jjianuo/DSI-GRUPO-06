@@ -40,20 +40,19 @@
         </Viewbox>
         
         <StackPanel HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1">
-            <Button Content="NEW GAME" Style="{StaticResource mainButton}">
+            <Button Content="NEW GAME" Style="{StaticResource mainButton}" Click="Button_Click">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
             </Button>
-            <Button Content="LOAD GAME" Style="{StaticResource mainButton}">
+            <Button Content="LOAD GAME" Style="{StaticResource mainButton}" IsEnabled="False">
                 <Button.Background>
                     <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
                 </Button.Background>
             </Button>
         </StackPanel>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="1">
-            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
-        </Button>
+                Width="60" Height="40" Background="Transparent" Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                Foreground="White" ToolTipService.ToolTip="Back" Grid.Row="5" Click="Back_click"/>
     </Grid>
 </Page>

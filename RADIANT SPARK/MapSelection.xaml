@@ -74,8 +74,7 @@
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </StackPanel>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="1" Click="BackButton_Click">
-            <SymbolIcon Symbol="Back" Foreground="AliceBlue"/>
-        </Button>
+                Width="60" Height="40" Background="Transparent" Grid.Row="2" Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                Foreground="White" ToolTipService.ToolTip="Back" Click="BackButton_Click"/>
     </Grid>
 </Page>
