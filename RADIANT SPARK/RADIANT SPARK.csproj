@@ -258,10 +258,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\NHL_Ducks.ttf" />
+    <Content Include="Fonts\Aboreto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Fonts\Aboreto-Regular.ttf" />
+    <Content Include="Fonts\NHL Ducks.ttf" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

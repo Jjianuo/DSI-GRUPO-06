@@ -17,15 +17,15 @@
         <Image Source="Assets/characterSelectionBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="2"/>
         <Viewbox>
-            <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+            <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                        FontSize="120" Foreground="FloralWhite"/>
         </Viewbox>
 
         <Viewbox Grid.Row="1" >
             <StackPanel Padding="40">
-                <TextBlock Text="MARÍA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                <TextBlock Text="MARÍA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
-                <TextBlock Text="JIANUO WEN HU" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+                <TextBlock Text="JIANUO WEN HU" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
             </StackPanel>
         </Viewbox>

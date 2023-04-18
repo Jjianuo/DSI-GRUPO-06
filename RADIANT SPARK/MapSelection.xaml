@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <Style x:Key="mainButton" TargetType="Button">
-            <Setter Property="FontFamily" Value="{StaticResource NHL_Ducks}"/>
+            <Setter Property="FontFamily" Value="{StaticResource NHL Ducks}"/>
             <Setter Property="FontSize" Value="65"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Background" Value="SteelBlue"/>
@@ -35,7 +35,7 @@
         </Grid.ColumnDefinitions>
         <Image Source="Assets/TeamSelectionBG.png" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="myTextBlock" Text="MAP SELECTION" FontFamily="{StaticResource NHL_Ducks}" 
+        <TextBlock x:Name="myTextBlock" Text="MAP SELECTION" FontFamily="{StaticResource NHL Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
         <StackPanel Grid.Row="1">
             <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
@@ -46,7 +46,7 @@
                     <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Viewbox>
             </Button>
-            <TextBlock Text="MAP ONE" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+            <TextBlock Text="MAP ONE" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="1" >
@@ -58,7 +58,7 @@
                     <SymbolIcon Symbol="Camera" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Viewbox>
             </Button>
-            <TextBlock Text="MAP TWO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+            <TextBlock Text="MAP TWO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </StackPanel>
         <StackPanel Grid.Row="1" Grid.Column="2" >
@@ -70,7 +70,7 @@
                     <SymbolIcon Symbol="Street" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
                 </Viewbox>
             </Button>
-            <TextBlock Text="MAP THREE" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}"
+            <TextBlock Text="MAP THREE" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </StackPanel>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"

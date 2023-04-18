@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <Style x:Key="mainButton" TargetType="Button">
-            <Setter Property="FontFamily" Value="{StaticResource NHL_Ducks}"/>
+            <Setter Property="FontFamily" Value="{StaticResource NHL Ducks}"/>
             <Setter Property="FontSize" Value="65"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Background" Value="SteelBlue"/>
@@ -24,7 +24,7 @@
         <Style TargetType="TextBlock">
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="FontFamily" Value="{StaticResource NHL_Ducks}"/>
+            <Setter Property="FontFamily" Value="{StaticResource NHL Ducks}"/>
             <Setter Property="FontSize" Value="120"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>

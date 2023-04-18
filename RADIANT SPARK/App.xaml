@@ -5,7 +5,7 @@
     xmlns:local="using:RADIANT_SPARK">
 
     <Application.Resources>
-        <FontFamily x:Key="NHL_Ducks">pack://application:,,,/Fonts/#NHL_Ducks</FontFamily>
+        <FontFamily x:Key="NHL Ducks">pack://application:,,,/Fonts/#NHL Ducks</FontFamily>
         <FontFamily x:Key="Aboreto">pack://application:,,,/Fonts/#Aboreto</FontFamily>
         <MediaPlayerElement x:Key="ClickSound" Source="ms-appx:///Sound/Bleep_07.wav" AutoPlay="False"/>
         <Style TargetType="Button">

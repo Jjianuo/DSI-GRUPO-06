@@ -76,7 +76,7 @@
                 </StackPanel>
             </Grid>
         </Grid>
-        <TextBlock Text="ACTIVE ITEMS" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL_Ducks}"
+        <TextBlock Text="ACTIVE ITEMS" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL Ducks}"
                 Foreground="SteelBlue" Margin="0,0,20,0"/>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
             <StackPanel Orientation="Horizontal">

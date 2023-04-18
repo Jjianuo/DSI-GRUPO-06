@@ -11,7 +11,7 @@
     <Grid>
         <Image Source="Assets/pause.jpg" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="myTextBlock" Text="PAUSE MENU" FontFamily="{StaticResource NHL_Ducks}" 
+        <TextBlock x:Name="myTextBlock" Text="PAUSE MENU" FontFamily="{StaticResource NHL Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
         <Rectangle HorizontalAlignment="Left" Fill="AliceBlue" Opacity="0.45" Height="1000" Width="150"/>
         <StackPanel>

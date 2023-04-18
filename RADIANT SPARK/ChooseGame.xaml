@@ -10,7 +10,7 @@
 
     <Page.Resources>
         <Style x:Key="mainButton" TargetType="Button">
-            <Setter Property="FontFamily" Value="{StaticResource NHL_Ducks}"/>
+            <Setter Property="FontFamily" Value="{StaticResource NHL Ducks}"/>
             <Setter Property="FontSize" Value="65"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Background" Value="SteelBlue"/>
@@ -35,7 +35,7 @@
         <Image Source="Assets/choosegameBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
         <Viewbox Grid.ColumnSpan="3">
-            <TextBlock Text="CHOOSE GAME" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL_Ducks}" 
+            <TextBlock Text="CHOOSE GAME" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}" 
                        FontSize="120" Foreground="FloralWhite" />
         </Viewbox>
         

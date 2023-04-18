@@ -13,7 +13,7 @@
 
     <Page.Resources>
         <Style TargetType="Button">
-            <Setter Property="FontFamily" Value="{StaticResource NHL_Ducks}"/>
+            <Setter Property="FontFamily" Value="{StaticResource NHL Ducks}"/>
             <Setter Property="FontSize" Value="65"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Background" Value="SteelBlue"/>
@@ -83,7 +83,7 @@
     <Grid>
         <Image Source="Assets/main_menu_2.jpg" Stretch="UniformToFill" 
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="myTextBlock" Text="RADIANT SPARK" FontFamily="{StaticResource NHL_Ducks}" 
+        <TextBlock x:Name="myTextBlock" Text="RADIANT SPARK" FontFamily="{StaticResource NHL Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 50, 0, 0">
             <Button Content="PLAY" Click="Play_Click"/>
