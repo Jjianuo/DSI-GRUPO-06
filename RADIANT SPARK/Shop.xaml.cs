@@ -94,6 +94,7 @@ namespace RADIANT_SPARK
             }
             else
             {
+                popupButton.Focus(FocusState.Programmatic);
                 popupButton.IsEnabled = true;
                 notEnoughPopup.Visibility = Visibility.Collapsed;
             }

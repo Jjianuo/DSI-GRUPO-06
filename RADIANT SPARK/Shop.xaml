@@ -79,7 +79,7 @@
                     <TextBlock Text="{x:Bind popupPrice, Mode=OneWay}" 
                                FontSize="24.667" HorizontalAlignment="Center"/>
                     <Button x:Name="popupButton" Content="Buy" HorizontalAlignment="Center" Margin="10" Click="Button_Click"
-                            CornerRadius="10"/>
+                            CornerRadius="10" IsTabStop="True" UseSystemFocusVisuals="True"/>
                     <TextBlock x:Name="notEnoughPopup" Foreground="Red" Text="Not enough credits" Visibility="Collapsed"
                                FontSize="24.667" HorizontalAlignment="Center"/>
                 </StackPanel>

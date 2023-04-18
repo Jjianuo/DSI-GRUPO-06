@@ -256,7 +256,7 @@
             <TextBlock Text="Music volume" FontSize="60"/>
         </Viewbox>
         <Slider x:Name="MusicSlider" Style="{StaticResource ThickerSlider}" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" TickFrequency="20" TickPlacement="Inline" Orientation="Horizontal" 
-            Maximum="100" Minimum="0" Value="50" ValueChanged="MusicSlider_ValueChanged"/>
+            Maximum="100" Minimum="0" Value="50" ValueChanged="MusicSlider_ValueChanged" IsFocusEngagementEnabled="True"/>
         <Viewbox  Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Bottom">
             <TextBlock Text="Sound volume" FontSize="60"/>
         </Viewbox>
