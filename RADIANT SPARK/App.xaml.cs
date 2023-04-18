@@ -14,8 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using AudioEffectComponent;
-using Windows.Media.Effects;
 
 namespace RADIANT_SPARK
 {
@@ -24,7 +22,6 @@ namespace RADIANT_SPARK
     /// </summary>
     sealed partial class App : Application
     {
-        bool _isInBackgroundMode = false;
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -34,18 +31,8 @@ namespace RADIANT_SPARK
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            this.EnteredBackground += App_EnteredBackground;
-            this.LeavingBackground += App_LeavingBackground;
-
             ElementSoundPlayer.State = ElementSoundPlayerState.On;
 
-            //// Create a property set and add a property/value pair
-            //PropertySet echoProperties = new PropertySet();
-            //echoProperties.Add("Mix", 0.5f);
-
-            //// Instantiate the custom effect defined in the 'AudioEffectComponent' project
-            //AudioEffectDefinition echoEffectDefinition = new AudioEffectDefinition(typeof(ExampleAudioEffect).FullName, echoProperties);
-            //fileInputNode.EffectDefinitions.Add(echoEffectDefinition);
         }
 
         /// <summary>
@@ -112,14 +99,7 @@ namespace RADIANT_SPARK
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-        private void App_EnteredBackground(object sender, EnteredBackgroundEventArgs e)
-        {
-            _isInBackgroundMode = true;
-        }
-        private void App_LeavingBackground(object sender, LeavingBackgroundEventArgs e)
-        {
-            _isInBackgroundMode = false;
-        }
+    
         public static bool TryGoBack()
         {
             Frame rootFrame = Window.Current.Content as Frame;
