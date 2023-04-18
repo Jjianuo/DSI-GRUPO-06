@@ -23,7 +23,7 @@
 
         <Viewbox Grid.Row="1" >
             <StackPanel Padding="40">
-                <TextBlock Text="MARÍA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
+                <TextBlock Text="MARiA SACHEZ CARRASCO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
                 <TextBlock Text="JIANUO WEN HU" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite" Padding="40"/>
