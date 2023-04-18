@@ -14,7 +14,8 @@
         <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1480">
             <TextBlock Text="LOADING..." FontFamily="{StaticResource NHL_Ducks}" 
             FontSize="50" Foreground="AliceBlue" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-            <ProgressBar Margin="20, 20, 20, 20" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1400"/>
+            <ProgressBar Margin="20, 20, 20, 20" Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1400"
+                         IsIndeterminate="False" Value="0" Foreground="SteelBlue" x:Name="myProgressBar"/>
         </StackPanel>
     </Grid>
 </Page>
