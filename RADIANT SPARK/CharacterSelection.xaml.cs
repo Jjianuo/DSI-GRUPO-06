@@ -34,7 +34,7 @@ namespace RADIANT_SPARK
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(LoadingScreen));
+            Frame.Navigate(typeof(MapSelection));
         }
     }
 }

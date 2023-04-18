@@ -34,7 +34,7 @@ namespace RADIANT_SPARK
 
         private void Oldworld_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(LoadingScreen));
+            Frame.Navigate(typeof(MapSelection));
         }
 
         private void Newworld_Click(object sender, RoutedEventArgs e)

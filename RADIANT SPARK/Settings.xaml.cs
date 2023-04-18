@@ -44,7 +44,7 @@ namespace RADIANT_SPARK
             Slider slider = sender as Slider;
             if (slider != null)
             {
-                //media.Volume = slider.Value;
+                ElementSoundPlayer.Volume = slider.Value / 100;
             }
         }
 

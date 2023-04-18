@@ -263,6 +263,12 @@
   <ItemGroup>
     <Content Include="Fonts\Aboreto-Regular.ttf" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AudioEffectComponent\AudioEffectComponent.csproj">
+      <Project>{cec23462-5c20-47b5-ab8c-97541eef9ff3}</Project>
+      <Name>AudioEffectComponent</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

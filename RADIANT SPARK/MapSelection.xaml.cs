@@ -32,7 +32,7 @@ namespace RADIANT_SPARK
         }
         private void CharacterSelect_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(CharacterSelection));
+            Frame.Navigate(typeof(LoadingScreen));
         }
     }
 }
