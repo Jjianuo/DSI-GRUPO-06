@@ -30,11 +30,13 @@ namespace RADIANT_SPARK
         string moneyText;
         int money;
         ActiveItem lastClicked;
+        Dictionary<ActiveItem, int> BoughtItems;
         public event PropertyChangedEventHandler PropertyChanged;
         public Shop()
         {
             this.InitializeComponent();
             this.ViewModel = new ActiveItemsViewModel();
+            BoughtItems = new Dictionary<ActiveItem, int>();
 
             money = 666;
             moneyText = "Current credits: " + money.ToString() + "$";
@@ -107,6 +109,9 @@ namespace RADIANT_SPARK
             moneyText = "Current credits: " + money.ToString() + "$";
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(moneyText)));
+            if (!BoughtItems.TryAdd(lastClicked, 1)) {
+                BoughtItems[lastClicked] += 1;
+            }
 
             if(lastClicked.ItemName == "Die")
             {
