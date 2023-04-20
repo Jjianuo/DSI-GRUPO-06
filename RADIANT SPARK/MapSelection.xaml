@@ -17,9 +17,58 @@
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="Margin" Value="0, 40, 0, 40"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <Setter Property="Height" Value="100"/>
-            <Setter Property="Width" Value="400"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid x:Name="RootGrid" Background="SteelBlue" Opacity="0.65">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal">
+                                        <Storyboard>
+                                            <PointerUpThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="PointerOver">
+                                        <VisualState.Setters>
+                                            <Setter Target="RootGrid.Background" Value="DarkSlateBlue"/>
+                                            <Setter Target="RootGrid.BorderBrush" Value="Cyan"/>
+                                        </VisualState.Setters>
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="#808080" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Target="RootGrid.Background" Value="Navy"/>
+                                            <Setter Target="RootGrid.BorderBrush" Value="Cyan"/>
+                                        </VisualState.Setters>
+                                        <Storyboard>
+                                            <PointerDownThemeAnimation Storyboard.TargetName="RootGrid" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlBackgroundBaseLowBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="Foreground">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="White" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="BorderBrush">
+                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource SystemControlDisabledTransparentBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <ContentPresenter x:Name="ContentPresenter" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Content="{TemplateBinding Content}" ContentTransitions="{TemplateBinding ContentTransitions}" ContentTemplate="{TemplateBinding ContentTemplate}" Padding="{TemplateBinding Padding}" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" AutomationProperties.AccessibilityView="Raw"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Page.Resources>
     
@@ -27,54 +76,47 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="8*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Source="Assets/TeamSelectionBG.png" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
+        <Image Source="Assets/TeamSelectionBG.png" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="4"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock x:Name="myTextBlock" Text="MAP SELECTION" FontFamily="{StaticResource NHL Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
-        <StackPanel Grid.Row="1">
-            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
-                <Button.Background>
-                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
-                </Button.Background>
-                <Viewbox>
-                    <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                </Viewbox>
-            </Button>
+        <Button Grid.Row="1" Style="{StaticResource mainButton}" Margin="40" Padding="20" HorizontalAlignment="Center" Click="CharacterSelect_Click">
+            <Viewbox>
+                <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Viewbox>
+        </Button>
+        <Viewbox Grid.Row="2" VerticalAlignment="Top">
             <TextBlock Text="MAP ONE" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
-                FontSize="80" Foreground="FloralWhite" Padding="40"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" >
-            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
-                <Button.Background>
-                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
-                </Button.Background>
-                <Viewbox>
-                    <SymbolIcon Symbol="Camera" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                </Viewbox>
-            </Button>
+            FontSize="80" Foreground="FloralWhite" Padding="40"/>
+        </Viewbox>
+        <Button Grid.Row="1" Grid.Column="1" Style="{StaticResource mainButton}" Margin="40" Padding="20" HorizontalAlignment="Center" Click="CharacterSelect_Click">
+            <Viewbox>
+                <SymbolIcon Symbol="Camera" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Viewbox>
+        </Button>
+        <Viewbox Grid.Row="2" Grid.Column="1" VerticalAlignment="Top">
             <TextBlock Text="MAP TWO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
-                FontSize="80" Foreground="FloralWhite" Padding="40"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="2" >
-            <Button Style="{StaticResource mainButton}" Height="400" Width="400" HorizontalAlignment="Center" Click="CharacterSelect_Click">
-                <Button.Background>
-                    <SolidColorBrush Color="SteelBlue" Opacity="0.65"/>
-                </Button.Background>
-                <Viewbox>
-                    <SymbolIcon Symbol="Street" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-                </Viewbox>
-            </Button>
+            FontSize="80" Foreground="FloralWhite" Padding="40"/>
+        </Viewbox>
+        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource mainButton}" Margin="40" Padding="20" HorizontalAlignment="Stretch" Click="CharacterSelect_Click">
+            <Viewbox>
+                <SymbolIcon Symbol="Street" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+            </Viewbox>
+        </Button>
+        <Viewbox Grid.Row="2" Grid.Column="2" VerticalAlignment="Top">
             <TextBlock Text="MAP THREE" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
-                FontSize="80" Foreground="FloralWhite" Padding="40"/>
-        </StackPanel>
+            FontSize="80" Foreground="FloralWhite" Padding="40"/>
+        </Viewbox>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
-                Width="60" Height="40" Background="Transparent" Grid.Row="2" Style="{StaticResource NavigationBackButtonNormalStyle}" 
+                Width="60" Height="40" Background="Transparent" Grid.Row="3" Style="{StaticResource NavigationBackButtonNormalStyle}" 
                 Foreground="White" ToolTipService.ToolTip="Back" Click="BackButton_Click"/>
     </Grid>
 </Page>
