@@ -86,8 +86,10 @@
         </Grid.ColumnDefinitions>
         <Image Source="Assets/TeamSelectionBG.png" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="4"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="myTextBlock" Text="MAP SELECTION" FontFamily="{StaticResource NHL Ducks}" 
+        <Viewbox Grid.ColumnSpan="3">
+            <TextBlock x:Name="myTextBlock" Text="MAP SELECTION" FontFamily="{StaticResource NHL Ducks}" 
             FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
+        </Viewbox>
         <Button Grid.Row="1" Style="{StaticResource mainButton}" Margin="40" Padding="20" HorizontalAlignment="Center" Click="CharacterSelect_Click">
             <Viewbox>
                 <SymbolIcon Symbol="World" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
@@ -106,7 +108,7 @@
             <TextBlock Text="MAP TWO" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
             FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </Viewbox>
-        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource mainButton}" Margin="40" Padding="20" HorizontalAlignment="Stretch" Click="CharacterSelect_Click">
+        <Button Grid.Row="1" Grid.Column="2" Style="{StaticResource mainButton}" Margin="40" Padding="20" HorizontalAlignment="Center" Click="CharacterSelect_Click">
             <Viewbox>
                 <SymbolIcon Symbol="Street" Foreground="AliceBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
             </Viewbox>

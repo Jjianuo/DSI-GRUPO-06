@@ -9,37 +9,45 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
         <Image Source="Assets/pause.jpg" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="myTextBlock" Text="PAUSE MENU" FontFamily="{StaticResource NHL Ducks}" 
-            FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
-        <Rectangle HorizontalAlignment="Left" Fill="AliceBlue" Opacity="0.45" Height="1000" Width="150"/>
-        <StackPanel>
-            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="BackButton_Click">
-                <Viewbox>
-                    <SymbolIcon Symbol="Back" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </Viewbox>
-            </Button>
-            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="MainMenu_Click">
-                <Viewbox>
-                    <SymbolIcon Symbol="Home" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </Viewbox>
-            </Button>
-            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Shop_Click">
-                <Viewbox>
-                    <SymbolIcon Symbol="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </Viewbox>
-            </Button>
-            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Settings_Click">
-                <Viewbox>
-                    <SymbolIcon Symbol="Setting" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </Viewbox>
-            </Button>
-            <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Exit_Click">
-                <Viewbox>
-                    <SymbolIcon Symbol="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </Viewbox>
-            </Button>
-        </StackPanel>
+        <Viewbox Height="Auto" Width="Auto" VerticalAlignment="Top">
+            <TextBlock x:Name="myTextBlock" Text="PAUSE MENU" FontFamily="{StaticResource NHL Ducks}" 
+            FontSize="10" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
+        </Viewbox>
+        <Rectangle HorizontalAlignment="Left" Fill="AliceBlue" Opacity="0.45" Height="1000" Width="150" Grid.RowSpan="2"/>
+        <Viewbox HorizontalAlignment="Left" Width="130" VerticalAlignment="Top" Grid.RowSpan="2">
+            <StackPanel>
+                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="BackButton_Click">
+                    <Viewbox>
+                        <SymbolIcon Symbol="Back" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </Viewbox>
+                </Button>
+                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="MainMenu_Click">
+                    <Viewbox>
+                        <SymbolIcon Symbol="Home" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </Viewbox>
+                </Button>
+                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Shop_Click">
+                    <Viewbox>
+                        <SymbolIcon Symbol="Shop" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </Viewbox>
+                </Button>
+                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Settings_Click">
+                    <Viewbox>
+                        <SymbolIcon Symbol="Setting" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </Viewbox>
+                </Button>
+                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Exit_Click">
+                    <Viewbox>
+                        <SymbolIcon Symbol="Share" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </Viewbox>
+                </Button>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>

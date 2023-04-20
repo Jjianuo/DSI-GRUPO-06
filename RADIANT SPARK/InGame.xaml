@@ -85,19 +85,19 @@
                 <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
                     <Grid>
                         <Rectangle Fill="SteelBlue" Opacity="0.65"/>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2"/>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>
                     </Grid>
                 </Viewbox>
                 <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
                     <Grid>
                         <Rectangle Fill="SteelBlue" Opacity="0.65"/>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2"/>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>
                     </Grid>
                 </Viewbox>
                 <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
                     <Grid>
                         <Rectangle Fill="SteelBlue" Opacity="0.65"/>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2"/>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>
                     </Grid>
                 </Viewbox>
             </StackPanel>
