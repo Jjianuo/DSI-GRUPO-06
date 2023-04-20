@@ -22,6 +22,7 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class InGame : Page
     {
+        Dictionary<ActiveItem, int> activeItems;
         public InGame()
         {
             this.InitializeComponent();

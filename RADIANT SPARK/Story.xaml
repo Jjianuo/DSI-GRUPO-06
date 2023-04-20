@@ -10,8 +10,8 @@
 
     <Grid KeyDown="Grid_KeyDown">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="8*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -21,8 +21,10 @@
         </Grid.ColumnDefinitions>
         <Image Source="Assets/story.jpg" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="3"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock x:Name="myTextBlock" Text="STORY" FontFamily="{StaticResource NHL Ducks}" 
-            FontSize="150" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1"/>
+        <Viewbox Grid.Column="1" Height="Auto" Width="Auto" Grid.Row="0">
+            <TextBlock x:Name="myTextBlock" Text="STORY" FontFamily="{StaticResource NHL Ducks}" 
+            FontSize="150" Foreground="AliceBlue" HorizontalAlignment="Center"/>
+        </Viewbox>
         <TextBlock x:Name="myText" TextWrapping="Wrap" FontFamily="{StaticResource Aboreto}" FontWeight="Bold"
             FontSize="35" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Row="1" Grid.Column="1" TextAlignment="Center">
             In a distant future, five wise governors try to solve the society's population problems by suggesting the use of technological progress.
@@ -30,10 +32,11 @@
             the divisions made between the citizens generate instability, so a group of conservative inhabitants rise up and create a whole new community based on a traditionalist and religious ideology.
             this will start a violent confrontation between the two opposed  beliefs: ''the old world'' and ''the new world''.
         </TextBlock>
-        <TextBlock x:Name="Continue" Text="PRESS ANY KEY TO CONTINUE" FontFamily="{StaticResource NHL Ducks}"
+        <Viewbox Grid.Column="1" Grid.Row="2" Height="Auto" Margin="0, 0, 0, 20">
+            <TextBlock x:Name="Continue" Text="PRESS ANY KEY TO CONTINUE" FontFamily="{StaticResource NHL Ducks}"
             FontSize="90" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Visibility="Collapsed"/>
-        <ScrollViewer IsTabStop="True" Width="10000" Height="1000" Grid.RowSpan="3" Grid.ColumnSpan="3" FocusVisualMargin="-6"/>
-
+        </Viewbox>
+        <ScrollViewer IsTabStop="True" Width="10000" Height="1000" Grid.RowSpan="3" Grid.ColumnSpan="3" FocusVisualMargin="-6" VerticalScrollMode="Enabled"/>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
                 Width="60" Height="40" Background="Transparent" Grid.Row="2" Style="{StaticResource NavigationBackButtonNormalStyle}" 
                 Foreground="White" ToolTipService.ToolTip="Back" Click="Back_Click"/>

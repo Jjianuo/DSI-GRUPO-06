@@ -15,6 +15,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Canvas Grid.Row="1" AllowDrop="True" Grid.RowSpan="2"/>
         <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="4"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Grid>
@@ -79,32 +80,15 @@
         <TextBlock Text="ACTIVE ITEMS" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL Ducks}"
                 Foreground="SteelBlue" Margin="0,0,20,0"/>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-            <StackPanel Orientation="Horizontal">
-                <Button Height="100" Width="100" HorizontalAlignment="Right" >
-                    <Button.Background>
-                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
-                    </Button.Background>
-                    <Viewbox>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
-                    </Viewbox>
-                </Button>
-                <Button Height="100" Width="100" HorizontalAlignment="Right" >
-                    <Button.Background>
-                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
-                    </Button.Background>
-                    <Viewbox>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
-                    </Viewbox>
-                </Button>
-                <Button Height="100" Width="100" HorizontalAlignment="Right" >
-                    <Button.Background>
-                        <SolidColorBrush Color="AliceBlue" Opacity="0.65"/>
-                    </Button.Background>
-                    <Viewbox>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue"/>
-                    </Viewbox>
-                </Button>
-            </StackPanel>
+
+            <ListView Grid.Row="2" ItemsSource="{x:Bind activeItems}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:Name="SingleLineDataTemplate">
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </Grid>
     </Grid>
 </Page>
