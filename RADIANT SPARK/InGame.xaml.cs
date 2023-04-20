@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -34,6 +35,21 @@ namespace RADIANT_SPARK
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Settings));
+        }
+
+        private void Canvas_DragOver(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Copy;
+        }
+
+        private void Canvas_Drop(object sender, DragEventArgs e)
+        {
+
+        }
+
+        private void Button_DragStarting(UIElement sender, DragStartingEventArgs args)
+        {
+
         }
     }
 }

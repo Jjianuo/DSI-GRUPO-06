@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Canvas Grid.Row="1" AllowDrop="True" Grid.RowSpan="2"/>
+        <Canvas Grid.Row="1" AllowDrop="True" Grid.RowSpan="2" DragOver="Canvas_DragOver" Drop="Canvas_Drop"/>
         <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="4"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Grid>
@@ -81,14 +81,26 @@
                 Foreground="SteelBlue" Margin="0,0,20,0"/>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 
-            <ListView Grid.Row="2" ItemsSource="{x:Bind activeItems}">
-                <ListView.ItemTemplate>
-                    <DataTemplate x:Name="SingleLineDataTemplate">
-                        
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            
+            <StackPanel Orientation="Horizontal">
+                <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
+                    <Grid>
+                        <Rectangle Fill="SteelBlue" Opacity="0.65"/>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2"/>
+                    </Grid>
+                </Viewbox>
+                <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
+                    <Grid>
+                        <Rectangle Fill="SteelBlue" Opacity="0.65"/>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2"/>
+                    </Grid>
+                </Viewbox>
+                <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
+                    <Grid>
+                        <Rectangle Fill="SteelBlue" Opacity="0.65"/>
+                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2"/>
+                    </Grid>
+                </Viewbox>
+            </StackPanel>
         </Grid>
     </Grid>
 </Page>
