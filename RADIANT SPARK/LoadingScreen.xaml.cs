@@ -22,6 +22,7 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class LoadingScreen : Page
     {
+        CurrentItems currentItems;
         public LoadingScreen()
         {
             this.InitializeComponent();
@@ -53,14 +54,23 @@ namespace RADIANT_SPARK
             timesTicked++;
             if (timesTicked > timesToTick)
             {
-                myProgressBar.Value += 4;
+                myProgressBar.Value += 20;
                 stopTime = time;
                 span = stopTime - startTime;
             }
             if (myProgressBar.Value >= 100)
             {
-                Frame.Navigate(typeof(InGame));
+                Frame.Navigate(typeof(InGame), currentItems);
                 dispatcherTimer.Stop();
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e?.Parameter is CurrentItems ci)
+            {
+                currentItems = ci;
             }
         }
     }

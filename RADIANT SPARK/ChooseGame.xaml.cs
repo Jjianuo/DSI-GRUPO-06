@@ -22,6 +22,7 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class ChooseGame : Page
     {
+        CurrentItems currentItems;
         public ChooseGame()
         {
             this.InitializeComponent();
@@ -29,12 +30,22 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            Frame.Navigate(typeof(MainPage), currentItems);
             App.TryGoBack();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e?.Parameter is CurrentItems ci)
+            {
+                currentItems = ci;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Story));
+            Frame.Navigate(typeof(Story), currentItems);
         }
     }
 }

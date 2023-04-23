@@ -23,18 +23,18 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class InGame : Page
     {
-        Dictionary<ActiveItem, int> activeItems;
+        CurrentItems currentItems;
         public InGame()
         {
             this.InitializeComponent();
         }
         private void Pause_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(PauseMenu));
+            Frame.Navigate(typeof(PauseMenu), currentItems);
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Settings));
+            Frame.Navigate(typeof(Settings), currentItems);
         }
 
         private void Canvas_DragOver(object sender, DragEventArgs e)
@@ -50,6 +50,15 @@ namespace RADIANT_SPARK
         private void Button_DragStarting(UIElement sender, DragStartingEventArgs args)
         {
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e?.Parameter is CurrentItems ci)
+            {
+                currentItems = ci;
+            }
         }
     }
 }

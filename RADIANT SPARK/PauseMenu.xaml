@@ -22,7 +22,7 @@
         <Rectangle HorizontalAlignment="Left" Fill="AliceBlue" Opacity="0.45" Height="1000" Width="150" Grid.RowSpan="2"/>
         <Viewbox HorizontalAlignment="Left" Width="130" VerticalAlignment="Top" Grid.RowSpan="2">
             <StackPanel>
-                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="BackButton_Click">
+                <Button Height="130" Width="130" HorizontalAlignment="Left" Margin="10" Click="Back_click">
                     <Viewbox>
                         <SymbolIcon Symbol="Back" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                     </Viewbox>

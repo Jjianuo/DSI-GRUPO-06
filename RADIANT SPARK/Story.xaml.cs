@@ -23,6 +23,7 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class Story : Page
     {
+        CurrentItems currentItems;
         public Story()
         {
             this.InitializeComponent();
@@ -31,7 +32,7 @@ namespace RADIANT_SPARK
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            Frame.Navigate(typeof(TeamSelection));
+            Frame.Navigate(typeof(TeamSelection), currentItems);
         }
 
         DispatcherTimer dispatcherTimer;
@@ -66,9 +67,18 @@ namespace RADIANT_SPARK
             }
         }
 
-        private void Back_Click(object sender, RoutedEventArgs e)
+        private void Back_click(object sender, RoutedEventArgs e)
         {
-            App.TryGoBack();
+            Frame.Navigate(typeof(MainPage), currentItems);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e?.Parameter is CurrentItems ci)
+            {
+                currentItems = ci;
+            }
         }
     }
 }

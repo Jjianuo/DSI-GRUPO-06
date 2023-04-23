@@ -129,6 +129,7 @@
     <Compile Include="Credits.xaml.cs">
       <DependentUpon>Credits.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CurrentItems.cs" />
     <Compile Include="InGame.xaml.cs">
       <DependentUpon>InGame.xaml</DependentUpon>
     </Compile>

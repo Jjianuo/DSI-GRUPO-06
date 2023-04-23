@@ -22,30 +22,42 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        CurrentItems currentItems;
         public MainPage()
         {
             this.InitializeComponent();
+            currentItems = new CurrentItems();
+            currentItems.CurrentBoughtItems = new Dictionary<ActiveItem, int>();
         }
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ChooseGame));
+            Frame.Navigate(typeof(ChooseGame), currentItems);
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Settings));
+            Frame.Navigate(typeof(Settings), currentItems);
         }
         private void Shop_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Shop));
+            Frame.Navigate(typeof(Shop), currentItems);
         }
         private void Credits_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Credits));
+            Frame.Navigate(typeof(Credits), currentItems);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Exit();
+        } 
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if(e?.Parameter is CurrentItems ci)
+            {
+                currentItems = ci;
+            }
         }
     }
 }

@@ -22,17 +22,29 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class MapSelection : Page
     {
+        CurrentItems currentItems;
         public MapSelection()
         {
             this.InitializeComponent();
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            App.TryGoBack();
-        }
+
         private void CharacterSelect_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(LoadingScreen));
+            Frame.Navigate(typeof(LoadingScreen), currentItems);
+        }
+
+        private void Back_click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage), currentItems);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            if (e?.Parameter is CurrentItems ci)
+            {
+                currentItems = ci;
+            }
         }
     }
 }

@@ -283,6 +283,6 @@
         </Viewbox>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
                 Width="60" Height="40" Background="Transparent" Grid.Row="7" Style="{StaticResource NavigationBackButtonNormalStyle}" 
-                Foreground="White" ToolTipService.ToolTip="Back" Click="Back_Click"/>
+                Foreground="White" ToolTipService.ToolTip="Back" Click="Back_click"/>
     </Grid>
 </Page>
