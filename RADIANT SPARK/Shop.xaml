@@ -43,7 +43,7 @@
                     <StackPanel Height="280" Width="180" Margin="12" 
                         AutomationProperties.Name="{x:Bind ItemName}"
                         Background="SteelBlue" Opacity="0.85" CornerRadius="10">
-                        <Image Source="Assets\StoreLogo.png" Height="180" Width="180" Stretch="UniformToFill"/>
+                        <Image Source="{x:Bind IconImg}" Height="180" Width="180" Stretch="UniformToFill"/>
                         <StackPanel Margin="0,12">
                             <TextBlock Text="{x:Bind ItemName}" Margin="10,0,0,0"/>
                             <TextBlock Text="{x:Bind ItemType}" Style="{ThemeResource CaptionTextBlockStyle}" 
