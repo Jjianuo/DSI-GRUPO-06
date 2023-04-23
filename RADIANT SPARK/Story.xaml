@@ -36,7 +36,7 @@
             <TextBlock x:Name="Continue" Text="PRESS ANY KEY TO CONTINUE" FontFamily="{StaticResource NHL Ducks}"
             FontSize="90" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Visibility="Collapsed"/>
         </Viewbox>
-        <ScrollViewer IsTabStop="True" Width="10000" Height="1000" Grid.RowSpan="3" Grid.ColumnSpan="3" FocusVisualMargin="-6" VerticalScrollMode="Enabled"/>
+        <ScrollViewer IsTabStop="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.RowSpan="3" Grid.ColumnSpan="3" FocusVisualMargin="-6" VerticalScrollMode="Enabled"/>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
                 Width="60" Height="40" Background="Transparent" Grid.Row="2" Style="{StaticResource NavigationBackButtonNormalStyle}" 
                 Foreground="White" ToolTipService.ToolTip="Back" Click="Back_Click"/>
