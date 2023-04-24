@@ -22,7 +22,7 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class TeamSelection : Page
     {
-        CurrentItems currentItems;
+        Manager manager;
         public TeamSelection()
         {
             this.InitializeComponent();
@@ -30,26 +30,27 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            App.TryGoBack();
+            Frame.Navigate(typeof(Story), manager);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            if (e?.Parameter is CurrentItems ci)
+            if (e?.Parameter is Manager ci)
             {
-                currentItems = ci;
+                manager = ci;
+                manager.lastPage = "TeamSelection";
             }
         }
 
         private void Oldworld_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MapSelection), currentItems);
+            Frame.Navigate(typeof(MapSelection), manager);
         }
 
         private void Newworld_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(CharacterSelection), currentItems);
+            Frame.Navigate(typeof(CharacterSelection), manager);
         }
     }
 }

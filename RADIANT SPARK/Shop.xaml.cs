@@ -30,7 +30,7 @@ namespace RADIANT_SPARK
         string moneyText;
         int money;
         ActiveItem lastClicked;
-        CurrentItems currentItems;
+        Manager manager;
         public event PropertyChangedEventHandler PropertyChanged;
         public Shop()
         {
@@ -108,8 +108,8 @@ namespace RADIANT_SPARK
             moneyText = "Current credits: " + money.ToString() + "$";
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(moneyText)));
-            if (!currentItems.CurrentBoughtItems.TryAdd(lastClicked, 1)) {
-                currentItems.CurrentBoughtItems[lastClicked] += 1;
+            if (!manager.CurrentBoughtItems.TryAdd(lastClicked, 1)) {
+                manager.CurrentBoughtItems[lastClicked] += 1;
             }
 
             if(lastClicked.ItemName == "Die")
@@ -120,15 +120,20 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            App.TryGoBack();
+            if (manager.lastPage == "InGame")
+                Frame.Navigate(typeof(InGame), manager);
+            else if (manager.lastPage == "PauseMenu")
+                Frame.Navigate(typeof(PauseMenu), manager);
+            else
+                Frame.Navigate(typeof(MainPage), manager);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            if (e?.Parameter is CurrentItems ci)
+            if (e?.Parameter is Manager ci)
             {
-                currentItems = ci;
+                manager = ci;
             }
         }
     }

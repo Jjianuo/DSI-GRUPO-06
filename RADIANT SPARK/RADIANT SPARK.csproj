@@ -129,7 +129,7 @@
     <Compile Include="Credits.xaml.cs">
       <DependentUpon>Credits.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CurrentItems.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="InGame.xaml.cs">
       <DependentUpon>InGame.xaml</DependentUpon>
     </Compile>
@@ -229,6 +229,8 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Sound\Bleep_07.wav" />
+    <Content Include="Sound\menu.wav" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

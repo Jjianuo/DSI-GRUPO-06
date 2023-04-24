@@ -22,35 +22,36 @@ namespace RADIANT_SPARK
     /// </summary>
     public sealed partial class PauseMenu : Page
     {
-        CurrentItems currentItems;
+        Manager manager;
         public PauseMenu()
         {
             this.InitializeComponent();
         }
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            App.TryGoBack();
+            Frame.Navigate(typeof(InGame), manager);
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            if (e?.Parameter is CurrentItems ci)
+            if (e?.Parameter is Manager ci)
             {
-                currentItems = ci;
+                manager = ci;
+                manager.lastPage = "PauseMenu";
             }
         }
         private void MainMenu_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), currentItems);
+            Frame.Navigate(typeof(MainPage), manager);
         }
         private void Shop_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Shop), currentItems);
+            Frame.Navigate(typeof(Shop), manager);
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Settings), currentItems);
+            Frame.Navigate(typeof(Settings), manager);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
