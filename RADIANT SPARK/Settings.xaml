@@ -276,8 +276,8 @@
             <TextBlock Text="Language" FontSize="60"/>
         </Viewbox>
         <Viewbox Grid.Row="7" Grid.Column="2" VerticalAlignment="Top" Height="75">
-            <ComboBox Grid.Row="7" Grid.Column="1" SelectedItem="English">
-                <x:String>Español</x:String>
+            <ComboBox x:Name="Language" Grid.Row="7" Grid.Column="1" SelectedItem="English" SelectionChanged="Language_SelectionChanged">
+                <x:String>Spanish</x:String>
                 <x:String>English</x:String>
             </ComboBox>
         </Viewbox>

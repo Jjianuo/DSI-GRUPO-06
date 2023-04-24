@@ -29,7 +29,6 @@ namespace RADIANT_SPARK
         }
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(InGame), currentItems);
             App.TryGoBack();
         }
 

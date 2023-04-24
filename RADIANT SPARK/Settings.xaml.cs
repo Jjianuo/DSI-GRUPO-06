@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -31,7 +32,7 @@ namespace RADIANT_SPARK
         };
         public List<string> Languages { get; } = new List<string>()
         {
-            "Español",
+            "Spanish",
             "English"
         };
 
@@ -56,7 +57,7 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage), currentItems);
+            App.TryGoBack();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -65,6 +66,20 @@ namespace RADIANT_SPARK
             if (e?.Parameter is CurrentItems ci)
             {
                 currentItems = ci;
+            }
+        }
+
+        private void Language_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string language = e.AddedItems[0].ToString();
+            switch(language)
+            {
+                case "Spanish":
+                    ApplicationLanguages.PrimaryLanguageOverride = "Spanish";
+                    break;
+                case "English":
+                    ApplicationLanguages.PrimaryLanguageOverride = "English";
+                    break;
             }
         }
     }
