@@ -587,7 +587,7 @@
         <Slider x:Name="SoundSlider" Style="{StaticResource ThickerSlider}" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Top" TickFrequency="20" TickPlacement="Inline" Orientation="Horizontal" 
             Maximum="100" Minimum="0" Value="50" Foreground="White" ValueChanged="SoundSlider_ValueChanged"/>
         <Viewbox Grid.Row="6" Grid.Column="1" VerticalAlignment="Bottom">
-            <TextBlock x:Uid="FullscreenT_Settings" FontSize="60" SelectionChanged="TextBlock_SelectionChanged"/>
+            <TextBlock x:Uid="FullscreenT_Settings" FontSize="60"/>
         </Viewbox>
         <Viewbox Grid.Row="7" Grid.Column="1" VerticalAlignment="Top" Height="75">
             <CheckBox Style="{StaticResource CheckBoxStyle1}" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" 
@@ -597,7 +597,7 @@
             <TextBlock x:Uid="LanguageT_Settings" FontSize="60"/>
         </Viewbox>
         <Viewbox Grid.Row="7" Grid.Column="2" VerticalAlignment="Top" Height="75">
-            <ComboBox x:Name="Language" Grid.Row="7" Grid.Column="1" SelectedItem="English" SelectionChanged="Language_SelectionChanged">
+            <ComboBox x:Name="Language" Grid.Row="7" Grid.Column="1" SelectedItem="Spanish" SelectionChanged="Language_SelectionChanged">
                 <x:String>Spanish</x:String>
                 <x:String>English</x:String>
             </ComboBox>

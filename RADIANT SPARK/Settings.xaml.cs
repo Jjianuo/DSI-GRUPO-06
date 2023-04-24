@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Resources.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Globalization;
@@ -100,21 +101,16 @@ namespace RADIANT_SPARK
 
         private void Language_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //string language = e.AddedItems[0].ToString();
-            //switch(language)
-            //{
-            //    case "Spanish":
-            //        ApplicationLanguages.PrimaryLanguageOverride = "Spanish";
-            //        break;
-            //    case "English":
-            //        ApplicationLanguages.PrimaryLanguageOverride = "English";
-            //        break;
-            //}
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
+            string language = e.AddedItems[0].ToString();
+            switch (language)
+            {
+                case "English":
+                    ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+                    break;
+                case "Spanish":
+                    ApplicationLanguages.PrimaryLanguageOverride = "es-ES";
+                    break;
+            }
         }
     }
 }
