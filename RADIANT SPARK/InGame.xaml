@@ -69,7 +69,7 @@
             <Grid HorizontalAlignment="Right">
                 <Rectangle HorizontalAlignment="Right" Fill="WhiteSmoke" Opacity="0.80" Height="250" Width="600"/>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock TextWrapping="Wrap" FontFamily="{StaticResource Aboreto}" FontWeight="Bold"
+                    <TextBlock x:Uid="StatsT_InGame" TextWrapping="Wrap" FontFamily="{StaticResource Aboreto}" FontWeight="Bold"
                     FontSize="35" Foreground="SteelBlue"  HorizontalAlignment="Right" TextAlignment="Center" Margin="20, 60, 20, 20">
                     · HP: 30 · SPD: 30 <LineBreak/> · ATK: 5 · ION: 10 <LineBreak/> · DEF: 2 · RES: 2
                     </TextBlock>
@@ -77,7 +77,7 @@
                 </StackPanel>
             </Grid>
         </Grid>
-        <TextBlock Text="ACTIVE ITEMS" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL Ducks}"
+        <TextBlock x:Uid="ActiveIT_InGame" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL Ducks}"
                 Foreground="SteelBlue" Margin="0,0,20,0"/>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 

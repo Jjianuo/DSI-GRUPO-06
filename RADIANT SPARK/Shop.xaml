@@ -21,7 +21,7 @@
                        Foreground="FloralWhite"/>
         </Viewbox>
         <Viewbox>
-            <TextBlock Text="SHOP" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
+            <TextBlock x:Uid="TitleT_Shop" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                 FontSize="80" Foreground="FloralWhite"/>
         </Viewbox>
         <Viewbox Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,20,0">
@@ -80,7 +80,7 @@
                                FontSize="24.667" HorizontalAlignment="Center"/>
                     <Button x:Name="popupButton" Content="Buy" HorizontalAlignment="Center" Margin="10" Click="Button_Click"
                             CornerRadius="10" IsTabStop="True" UseSystemFocusVisuals="True"/>
-                    <TextBlock x:Name="notEnoughPopup" Foreground="Red" Text="Not enough credits" Visibility="Collapsed"
+                    <TextBlock x:Uid="NotEnCreT_Shop" x:Name="notEnoughPopup" Foreground="Red" Visibility="Collapsed"
                                FontSize="24.667" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Border>

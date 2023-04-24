@@ -87,7 +87,7 @@
         <Image Source="Assets/TeamSelectionBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="3" Grid.ColumnSpan="2"/>
         <Viewbox Grid.ColumnSpan="2">
-            <TextBlock Text="TEAM SELECTION" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
+            <TextBlock x:Uid="TitleT_TeamS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                     FontSize="120" Foreground="FloralWhite" />
         </Viewbox>
         <Button x:Name="Oldworld" Style="{StaticResource mainButton}" Grid.Row="1" HorizontalAlignment="Center" Click="Oldworld_Click">
@@ -102,11 +102,11 @@
             </Viewbox>
         </Button>
         <Viewbox Grid.Column="1" Grid.Row="2">
-            <TextBlock Text="NEW WORLD" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
+            <TextBlock x:Uid="NewWT_TeamS" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
             FontSize="80" Foreground="FloralWhite" Padding="40"/>
         </Viewbox>
         <Viewbox Grid.Column="0" Grid.Row="2">
-            <TextBlock Text="OLD WORLD" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
+            <TextBlock x:Uid="OldWT_TeamS" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
             FontSize="80" Foreground="FloralWhite" Padding="40" Grid.Column="0" Grid.Row="2"/>
         </Viewbox>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"

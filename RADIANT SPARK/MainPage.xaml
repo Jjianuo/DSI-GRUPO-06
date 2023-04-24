@@ -94,11 +94,11 @@
         </Viewbox>
         <Viewbox Grid.Row="1">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, 25, 0, 25" Height="Auto">
-                <Button Content="PLAY" Click="Play_Click"/>
-                <Button Content="SETTINGS" Click="Settings_Click"/>
-                <Button Content="SHOP" Click="Shop_Click"/>
-                <Button Content="CREDITS" Click="Credits_Click"/>
-                <Button Content="EXIT" VerticalAlignment="Bottom" Click="Exit_Click"/>
+                <Button x:Uid="PlayB_MainM" Click="Play_Click"/>
+                <Button x:Uid="SettingsB_MainM" Click="Settings_Click"/>
+                <Button x:Uid="ShopB_MainM" Click="Shop_Click"/>
+                <Button x:Uid="CreditsB_MainM" Click="Credits_Click"/>
+                <Button x:Uid="ExitB_MainM" VerticalAlignment="Bottom" Click="Exit_Click"/>
             </StackPanel>
         </Viewbox>
     </Grid>

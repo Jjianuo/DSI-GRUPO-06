@@ -17,7 +17,7 @@
         <Image Source="Assets/characterSelectionBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="2"/>
         <Viewbox>
-            <TextBlock Text="CREDITS" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
+            <TextBlock x:Uid="TitleT_Credits" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}"
                        FontSize="120" Foreground="FloralWhite"/>
         </Viewbox>
 

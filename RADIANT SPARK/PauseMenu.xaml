@@ -16,7 +16,7 @@
         <Image Source="Assets/pause.jpg" Stretch="UniformToFill" Grid.ColumnSpan="3" Grid.RowSpan="2"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Viewbox Height="Auto" Width="Auto" VerticalAlignment="Top">
-            <TextBlock x:Name="myTextBlock" Text="PAUSE MENU" FontFamily="{StaticResource NHL Ducks}" 
+            <TextBlock x:Uid="TitleT_PauseM" x:Name="myTextBlock" FontFamily="{StaticResource NHL Ducks}" 
             FontSize="10" Foreground="AliceBlue"  HorizontalAlignment="Center" Grid.ColumnSpan="3"/>
         </Viewbox>
         <Rectangle HorizontalAlignment="Left" Fill="AliceBlue" Opacity="0.45" Height="1000" Width="150" Grid.RowSpan="2"/>

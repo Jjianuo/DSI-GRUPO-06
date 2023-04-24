@@ -86,16 +86,16 @@
         <Image Source="Assets/choosegameBG.png" HorizontalAlignment="Center" VerticalAlignment="Center"
                Stretch="UniformToFill" Grid.RowSpan="2" Grid.ColumnSpan="3"/>
         <Viewbox Grid.ColumnSpan="3">
-            <TextBlock Text="CHOOSE GAME" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}" 
+            <TextBlock x:Uid="TitleT_ChooseGame" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="{StaticResource NHL Ducks}" 
                        FontSize="120" Foreground="FloralWhite" />
         </Viewbox>
         
         <StackPanel HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1">
             <Viewbox>
-                <Button Content="NEW GAME" Style="{StaticResource mainButton}" Click="Button_Click"/>
+                <Button x:Uid="NewGameB_ChooseGame" Style="{StaticResource mainButton}" Click="Button_Click"/>
             </Viewbox>
             <Viewbox>
-                <Button Content="LOAD GAME" Style="{StaticResource mainButton}" IsEnabled="False"/>
+                <Button x:Uid="LoadGameB_ChooseGame" Style="{StaticResource mainButton}" IsEnabled="False"/>
             </Viewbox>
         </StackPanel>
         <Button HorizontalAlignment="Left" VerticalAlignment="Bottom"
