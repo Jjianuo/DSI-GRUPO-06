@@ -22,7 +22,7 @@
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
             <Setter Property="Height" Value="80"/>
-            <Setter Property="Width" Value="400"/>
+            <Setter Property="Width" Value="530"/>
             <Setter Property="ui:Effects.Shadow" Value="{StaticResource CommonShadow}"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="Template">
