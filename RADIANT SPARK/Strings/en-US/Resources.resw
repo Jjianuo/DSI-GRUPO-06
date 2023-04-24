@@ -120,6 +120,9 @@
   <data name="ActiveIT_InGame.Text" xml:space="preserve">
     <value>ACTIVE ITEMS</value>
   </data>
+  <data name="AlphB_Shop.Text" xml:space="preserve">
+    <value>Alphabetic</value>
+  </data>
   <data name="CreditsB_MainM.Content" xml:space="preserve">
     <value>CREDITS</value>
   </data>
@@ -177,11 +180,17 @@
   <data name="PressAKT_Story.Text" xml:space="preserve">
     <value>PRESS ANY KEY TO CONTINUE</value>
   </data>
+  <data name="PriceB_Shop.Text" xml:space="preserve">
+    <value>Price</value>
+  </data>
   <data name="SettingsB_MainM.Content" xml:space="preserve">
     <value>SETTINGS</value>
   </data>
   <data name="ShopB_MainM.Content" xml:space="preserve">
     <value>SHOP</value>
+  </data>
+  <data name="SortB_Shop.Content" xml:space="preserve">
+    <value>Sort</value>
   </data>
   <data name="SoundVT_Settings.Text" xml:space="preserve">
     <value>SOUND VOLUME</value>
@@ -218,6 +227,9 @@
   </data>
   <data name="TitleT_TeamS.Text" xml:space="preserve">
     <value>TEAM SELECTION</value>
+  </data>
+  <data name="TypeB_Shop.Text" xml:space="preserve">
+    <value>Type</value>
   </data>
   <data name="WorldT_CharacterS.Text" xml:space="preserve">
     <value>WORLD</value>
