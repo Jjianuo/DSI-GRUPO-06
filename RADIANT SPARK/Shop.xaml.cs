@@ -7,6 +7,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Core;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Globalization;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -38,7 +39,10 @@ namespace RADIANT_SPARK
             this.ViewModel = new ActiveItemsViewModel();
 
             money = 666;
-            moneyText = "Current credits: " + money.ToString() + "$";
+            if (ApplicationLanguages.PrimaryLanguageOverride == "en-US")
+                moneyText = "Current credits: " + money.ToString() + "$";
+            else if (ApplicationLanguages.PrimaryLanguageOverride == "es-ES")
+                moneyText = "Dinero actual: " + money.ToString() + "€";
         }
 
         public ActiveItemsViewModel ViewModel { get; set; }
@@ -82,7 +86,11 @@ namespace RADIANT_SPARK
             standardPopup.HorizontalOffset = -200;
             popupTitle = ai.ItemName;
             popupText = ai.OneLineSummary;
-            popupPrice = "Price: " + ai.Price.ToString() + "$";
+            if (ApplicationLanguages.PrimaryLanguageOverride == "en-US")
+                popupPrice = "Price: " + ai.Price.ToString() + "$";
+            else if (ApplicationLanguages.PrimaryLanguageOverride == "es-ES")
+                popupPrice = "Precio: " + ai.Price.ToString() + "€";
+
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(popupTitle)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(popupText)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(popupPrice)));
@@ -107,7 +115,10 @@ namespace RADIANT_SPARK
         {
             manager.soundPlayer.Play();
             money -= lastClicked.Price;
-            moneyText = "Current credits: " + money.ToString() + "$";
+            if (ApplicationLanguages.PrimaryLanguageOverride == "en-US")
+                moneyText = "Current credits: " + money.ToString() + "$";
+            else if (ApplicationLanguages.PrimaryLanguageOverride == "es-ES")
+                moneyText = "Dinero actual: " + money.ToString() + "€";
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(moneyText)));
             if (!manager.CurrentBoughtItems.TryAdd(lastClicked, 1)) {
