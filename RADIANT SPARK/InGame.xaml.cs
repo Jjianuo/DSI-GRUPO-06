@@ -26,6 +26,7 @@ namespace RADIANT_SPARK
     public sealed partial class InGame : Page
     {
         Manager manager;
+        public ObservableCollection<ActiveItem> listaItems { get; } = new ObservableCollection<ActiveItem>();
         public Dictionary<ActiveItem, int> items { get; } = new Dictionary<ActiveItem, int>();
         public InGame()
         {
@@ -49,13 +50,15 @@ namespace RADIANT_SPARK
             e.AcceptedOperation = DataPackageOperation.Copy;
         }
 
-        private void Canvas_Drop(object sender, DragEventArgs e)
+        private async void Canvas_Drop(object sender, DragEventArgs e)
         {
-            ActiveItem Item = e.OriginalSource as ActiveItem;
-            string id = Item.Icon.ToString();
+            var id = await e.DataView.GetTextAsync();
+            var num = int.Parse(id);
+
+            ActiveItem Item = listaItems[num];
 
             var img = new Image();
-            img.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(id));
+            img.Source = Item.IconImg;
 
             img.Width = 100;
             img.Height = 100;
@@ -68,8 +71,8 @@ namespace RADIANT_SPARK
         private void Button_DragStarting(UIElement sender, DragStartingEventArgs args)
         {
             ActiveItem Item = args.OriginalSource as ActiveItem;
-            string id = Item.Icon.ToString();
-            args.Data.SetText(id);
+            int id = Item.Id;
+            args.Data.SetText(id.ToString());
             args.Data.RequestedOperation = DataPackageOperation.Copy;
         }
 
@@ -89,6 +92,14 @@ namespace RADIANT_SPARK
                     this.items.Add(boughtItem.Key, boughtItem.Value);
                 }
             base.OnNavigatedTo(e);
+        }
+
+        private void ListView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
+        {
+            ActiveItem Item = e.Items[0] as ActiveItem;
+            int id = Item.Id;
+            e.Data.SetText(id.ToString());
+            e.Data.RequestedOperation = DataPackageOperation.Copy;
         }
     }
 }

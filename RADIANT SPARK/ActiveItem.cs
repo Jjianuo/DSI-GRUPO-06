@@ -16,15 +16,16 @@ namespace RADIANT_SPARK
         public string ItemName { get; set; }
         public string ItemType { get; set; }
         public int Price { get; set; }
+        public int Id { get; set; }
         public string Icon { get; set; }
         public BitmapImage IconImg { get; set; }
         public ActiveItem()
         {
+            this.Id = 0;
             this.ItemName = "Flamethrower";
             this.ItemType = "Equippable";
             this.Price = 10;
             this.Icon = "Assets/1.png";
-            //string s = System.IO.Directory.GetCurrentDirectory() + "\\" + this.Icon;
             this.IconImg = new BitmapImage(new Uri(@"ms-appx:///Assets/1.png"));
         }
         public string OneLineSummary
@@ -52,6 +53,7 @@ namespace RADIANT_SPARK
             {
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id=0,
                     ItemName = "Bucket",
                     ItemType = "Equippable",
                     Price = 92,
@@ -60,6 +62,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 1,
                     ItemName = "Earthquake",
                     ItemType = "Terrain",
                     Price = 10,
@@ -68,6 +71,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 2,
                     ItemName = "HP potion",
                     ItemType = "Consumable",
                     Price = 7,
@@ -76,6 +80,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 3,
                     ItemName = "HP boost",
                     ItemType = "Consumable",
                     Price = 56,
@@ -84,6 +89,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 4,
                     ItemName = "Bird",
                     ItemType = "Summon",
                     Price = 36,
@@ -92,6 +98,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 5,
                     ItemName = "Bear",
                     ItemType = "Summon",
                     Price = 75,
@@ -100,6 +107,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 6,
                     ItemName = "Bottle",
                     ItemType = "Consumable",
                     Price = 81,
@@ -108,6 +116,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 7,
                     ItemName = "Lollipop",
                     ItemType = "Consumable",
                     Price = 46,
@@ -116,6 +125,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 8,
                     ItemName = "Cat",
                     ItemType = "Summon",
                     Price = 60,
@@ -124,6 +134,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 9,
                     ItemName = "Mythic sword",
                     ItemType = "Equippable",
                     Price = 38,
@@ -132,6 +143,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 10,
                     ItemName = "Laptop",
                     ItemType = "Equippable",
                     Price = 16,
@@ -140,6 +152,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 11,
                     ItemName = "Holy water",
                     ItemType = "Consumable",
                     Price = 9,
@@ -148,6 +161,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 12,
                     ItemName = "S8nic bible",
                     ItemType = "Consumable",
                     Price = 686,
@@ -156,6 +170,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 13,
                     ItemName = "Archangel's halo",
                     ItemType = "Consumable",
                     Price = 7,
@@ -164,6 +179,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 14,
                     ItemName = "Orca",
                     ItemType = "Summon",
                     Price = 16,
@@ -172,6 +188,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 15,
                     ItemName = "AK-47",
                     ItemType = "Equippable",
                     Price = 47,
@@ -180,6 +197,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 16,
                     ItemName = "Balls",
                     ItemType = "Summon",
                     Price = 69,
@@ -188,6 +206,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 17,
                     ItemName = "OPPA",
                     ItemType = "Summon",
                     Price = 369,
@@ -196,6 +215,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 18,
                     ItemName = "i-phone 2394",
                     ItemType = "Consumable",
                     Price = 999999999,
@@ -204,6 +224,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 19,
                     ItemName = "Die",
                     ItemType = "Consumable",
                     Price = -5,
@@ -212,6 +233,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 20,
                     ItemName = "Batchest",
                     ItemType = "Summon",
                     Price = 2120,
@@ -223,6 +245,7 @@ namespace RADIANT_SPARK
             {
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 0,
                     ItemName = "Cubo",
                     ItemType = "Equipable",
                     Price = 92,
@@ -231,6 +254,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 1,
                     ItemName = "Terremoto",
                     ItemType = "Terreno",
                     Price = 10,
@@ -239,6 +263,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 2,
                     ItemName = "Poción HP",
                     ItemType = "Consumible",
                     Price = 7,
@@ -247,6 +272,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 3,
                     ItemName = "Aumento de HP",
                     ItemType = "Consumible",
                     Price = 56,
@@ -255,6 +281,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 4,
                     ItemName = "Pájaro",
                     ItemType = "Invocable",
                     Price = 36,
@@ -263,6 +290,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 5,
                     ItemName = "Oso",
                     ItemType = "Invocable",
                     Price = 75,
@@ -271,6 +299,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 6,
                     ItemName = "Botella",
                     ItemType = "Consumible",
                     Price = 81,
@@ -279,6 +308,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 7,
                     ItemName = "Piruleta",
                     ItemType = "Consumible",
                     Price = 46,
@@ -287,6 +317,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 8,
                     ItemName = "Gato",
                     ItemType = "Invocable",
                     Price = 60,
@@ -295,6 +326,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 9,
                     ItemName = "Espada Mítica",
                     ItemType = "Equipable",
                     Price = 38,
@@ -303,6 +335,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 10,
                     ItemName = "Portátil",
                     ItemType = "Equipable",
                     Price = 16,
@@ -311,6 +344,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 11,
                     ItemName = "Agua Bendita",
                     ItemType = "Consumible",
                     Price = 9,
@@ -319,6 +353,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 12,
                     ItemName = "Biblia Sospechosa",
                     ItemType = "Consumible",
                     Price = 686,
@@ -327,6 +362,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 13,
                     ItemName = "Halo de Archangel",
                     ItemType = "Consumible",
                     Price = 7,
@@ -335,6 +371,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 14,
                     ItemName = "Orca",
                     ItemType = "Invocable",
                     Price = 16,
@@ -343,6 +380,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 15,
                     ItemName = "AK-47",
                     ItemType = "Equipable",
                     Price = 47,
@@ -351,6 +389,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 16,
                     ItemName = "Balls",
                     ItemType = "Invocable",
                     Price = 69,
@@ -359,6 +398,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 17,
                     ItemName = "OPPA",
                     ItemType = "Invocable",
                     Price = 369,
@@ -367,6 +407,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 18,
                     ItemName = "i-phone 2394",
                     ItemType = "Consumible",
                     Price = 999999999,
@@ -375,6 +416,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 19,
                     ItemName = "Muerte",
                     ItemType = "Consumible",
                     Price = -5,
@@ -383,6 +425,7 @@ namespace RADIANT_SPARK
                 });
                 this.activeitems.Add(new ActiveItem()
                 {
+                    Id = 20,
                     ItemName = "Batchest",
                     ItemType = "Invocable",
                     Price = 2120,
