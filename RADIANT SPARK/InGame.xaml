@@ -80,27 +80,21 @@
         <TextBlock x:Uid="ActiveIT_InGame" Grid.Row="1" FontSize="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontFamily="{StaticResource NHL Ducks}"
                 Foreground="SteelBlue" Margin="0,0,20,0"/>
         <Grid Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right">
-
-            <StackPanel Orientation="Horizontal">
-                <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
-                    <Grid>
-                        <Rectangle Fill="SteelBlue" Opacity="0.65"/>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>
-                    </Grid>
-                </Viewbox>
-                <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
-                    <Grid>
-                        <Rectangle Fill="SteelBlue" Opacity="0.65"/>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>
-                    </Grid>
-                </Viewbox>
-                <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
-                    <Grid>
-                        <Rectangle Fill="SteelBlue" Opacity="0.65"/>
-                        <SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>
-                    </Grid>
-                </Viewbox>
-            </StackPanel>
+            <ListView ItemsSource="{x:Bind ViewModel.Activeitems}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+            ScrollViewer.HorizontalScrollMode="Enabled" ScrollViewer.VerticalScrollMode="Disabled">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:Name="ImageTextDataTemplate" x:DataType="local:ActiveItem">
+                        <Viewbox Height="100" Width="100" HorizontalAlignment="Right" CanDrag="True" DragStarting="Button_DragStarting">
+                            <Grid>
+                                <Rectangle Fill="SteelBlue" Opacity="0.65"/>
+                                <!--<SymbolIcon Symbol="Pin" Foreground="SteelBlue" Margin="2,2,2,2" Opacity="0.65"/>-->
+                                <Image Source="{x:Bind IconImg}" Stretch="UniformToFill"/>
+                            </Grid>
+                        </Viewbox>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </Grid>
     </Grid>
 </Page>
