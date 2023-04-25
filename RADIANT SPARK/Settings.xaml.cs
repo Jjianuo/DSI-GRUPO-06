@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.ComponentModel;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Resources.Core;
 using Windows.Foundation;
@@ -23,10 +24,12 @@ namespace RADIANT_SPARK
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Settings : Page
+    public sealed partial class Settings : Page, INotifyPropertyChanged
     {
         Manager manager;
-        string lastPage;
+        public double musicValue;
+        public double soundValue;
+        public event PropertyChangedEventHandler PropertyChanged;
         public List<string> Resolutions { get; } = new List<string>()
         {
             "2160x1440",
@@ -49,21 +52,29 @@ namespace RADIANT_SPARK
             Slider slider = sender as Slider;
             if (slider != null && manager != null)
             {
-                manager.mediaPlayer.Volume = slider.Value / 100;
+                manager.slidePlayer.Play();
+                musicValue = slider.Value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(musicValue)));
+                manager.mediaPlayer.Volume = musicValue / 100;
             }
         }
 
         private void SoundSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
         {
             Slider slider = sender as Slider;
-            if (slider != null)
+            if (slider != null && manager != null)
             {
-                ElementSoundPlayer.Volume = slider.Value / 100;
+                manager.slidePlayer.Play();
+                soundValue = slider.Value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(soundValue)));
+                manager.slidePlayer.Volume = soundValue / 100;
+                manager.soundPlayer.Volume = soundValue / 100;
             }
         }
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             if (manager.lastPage == "InGame")
                 Frame.Navigate(typeof(InGame), manager);
             else if (manager.lastPage == "PauseMenu")
@@ -78,6 +89,16 @@ namespace RADIANT_SPARK
             if (e?.Parameter is Manager ci)
             {
                 manager = ci;
+                musicValue = manager.mediaPlayer.Volume * 100;
+                soundValue = manager.soundPlayer.Volume * 100;
+                if (manager.language == "en-US")
+                    LanguageCombobox.SelectedItem = "English";
+                else
+                    LanguageCombobox.SelectedItem = "Spanish";
+                if (ApplicationView.PreferredLaunchWindowingMode == ApplicationViewWindowingMode.FullScreen)
+                    Fullscreen.IsChecked = true;
+                else
+                    Fullscreen.IsChecked = false;
             }
         }
 
@@ -106,9 +127,13 @@ namespace RADIANT_SPARK
             {
                 case "English":
                     ApplicationLanguages.PrimaryLanguageOverride = "en-US";
+                    if (manager != null)
+                        manager.language = "en-US";
                     break;
                 case "Spanish":
                     ApplicationLanguages.PrimaryLanguageOverride = "es-ES";
+                    if(manager != null)
+                        manager.language = "es-ES";
                     break;
             }
         }

@@ -32,6 +32,7 @@ namespace RADIANT_SPARK
 
         private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(TeamSelection), manager);
         }
 
@@ -69,6 +70,7 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(ChooseGame), manager);
         }
 

@@ -30,12 +30,14 @@ namespace RADIANT_SPARK
 
         private void CharacterSelect_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(LoadingScreen), manager);
         }
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
-            if(manager.lastPage == "TeamSelection")
+            manager.soundPlayer.Play();
+            if (manager.lastPage == "TeamSelection")
                 Frame.Navigate(typeof(TeamSelection), manager);
             else
                 Frame.Navigate(typeof(CharacterSelection), manager);

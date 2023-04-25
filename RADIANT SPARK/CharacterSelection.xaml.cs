@@ -30,10 +30,12 @@ namespace RADIANT_SPARK
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(MapSelection), manager);
         }
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(TeamSelection), manager);
         }
 

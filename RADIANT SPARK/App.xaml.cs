@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -32,7 +33,7 @@ namespace RADIANT_SPARK
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            ElementSoundPlayer.State = ElementSoundPlayerState.On;
+            //ElementSoundPlayer.State = ElementSoundPlayerState.On;
 
         }
 

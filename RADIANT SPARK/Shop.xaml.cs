@@ -74,6 +74,7 @@ namespace RADIANT_SPARK
 
         private void mygridview_ItemClick(object sender, ItemClickEventArgs e)
         {
+            manager.soundPlayer.Play();
             ActiveItem ai = e.ClickedItem as ActiveItem;
             lastClicked = ai;
 
@@ -104,6 +105,7 @@ namespace RADIANT_SPARK
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             money -= lastClicked.Price;
             moneyText = "Current credits: " + money.ToString() + "$";
 
@@ -111,15 +113,11 @@ namespace RADIANT_SPARK
             if (!manager.CurrentBoughtItems.TryAdd(lastClicked, 1)) {
                 manager.CurrentBoughtItems[lastClicked] += 1;
             }
-
-            if(lastClicked.ItemName == "Die")
-            {
-                CoreApplication.Exit();
-            }
         }
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             if (manager.lastPage == "InGame")
                 Frame.Navigate(typeof(InGame), manager);
             else if (manager.lastPage == "PauseMenu")

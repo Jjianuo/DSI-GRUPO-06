@@ -30,10 +30,12 @@ namespace RADIANT_SPARK
         }
         private void Pause_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(PauseMenu), manager);
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Settings), manager);
         }
 

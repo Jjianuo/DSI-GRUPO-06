@@ -30,6 +30,7 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(MainPage), manager);
         }
 

@@ -29,6 +29,7 @@ namespace RADIANT_SPARK
         }
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(InGame), manager);
         }
 
@@ -43,18 +44,22 @@ namespace RADIANT_SPARK
         }
         private void MainMenu_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(MainPage), manager);
         }
         private void Shop_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Shop), manager);
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Settings), manager);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Application.Current.Exit();
         }
     }

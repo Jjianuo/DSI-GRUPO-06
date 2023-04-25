@@ -30,6 +30,7 @@ namespace RADIANT_SPARK
 
         private void Back_click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Story), manager);
         }
 
@@ -45,11 +46,13 @@ namespace RADIANT_SPARK
 
         private void Oldworld_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(MapSelection), manager);
         }
 
         private void Newworld_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(CharacterSelection), manager);
         }
     }

@@ -29,37 +29,31 @@ namespace RADIANT_SPARK
         public MainPage()
         {
             this.InitializeComponent();
-            if(manager == null)
-            {
-                manager = new Manager();
-                manager.CurrentBoughtItems = new Dictionary<ActiveItem, int>();
-
-                manager.mediaPlayer = new MediaPlayer();
-                manager.mediaPlayer.Source = MediaSource.CreateFromUri(new Uri("ms-appx:///Sound/menu.wav"));
-                manager.mediaPlayer.Volume = 0.5;
-                manager.mediaPlayer.IsLoopingEnabled = true;
-                manager.mediaPlayer.Play();
-            }
         }
 
         private void Play_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(ChooseGame), manager);
         }
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Settings), manager);
         }
         private void Shop_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Shop), manager);
         }
         private void Credits_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Frame.Navigate(typeof(Credits), manager);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
+            manager.soundPlayer.Play();
             Application.Current.Exit();
         } 
 
@@ -70,6 +64,10 @@ namespace RADIANT_SPARK
             {
                 manager = ci;
                 manager.lastPage = "MainPage";
+            }
+            else if (manager == null)
+            {
+                manager = new Manager();
             }
         }
     }

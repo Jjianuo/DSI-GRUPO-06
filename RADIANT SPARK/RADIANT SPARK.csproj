@@ -230,6 +230,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Sound\Bleep_07.wav" />
+    <Content Include="Sound\Click.wav" />
     <Content Include="Sound\menu.wav" />
   </ItemGroup>
   <ItemGroup>
