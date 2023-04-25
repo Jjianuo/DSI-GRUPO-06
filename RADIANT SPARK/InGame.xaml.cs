@@ -51,12 +51,26 @@ namespace RADIANT_SPARK
 
         private void Canvas_Drop(object sender, DragEventArgs e)
         {
+            ActiveItem Item = e.OriginalSource as ActiveItem;
+            string id = Item.Icon.ToString();
 
+            var img = new Image();
+            img.Source = new Windows.UI.Xaml.Media.Imaging.BitmapImage(new Uri(id));
+
+            img.Width = 100;
+            img.Height = 100;
+            MiCanvas.Children.Add(img);
+            Point PD = e.GetPosition(MiCanvas);
+            img.SetValue(Canvas.LeftProperty, PD.X);
+            img.SetValue(Canvas.TopProperty, PD.Y);
         }
 
         private void Button_DragStarting(UIElement sender, DragStartingEventArgs args)
         {
-
+            ActiveItem Item = args.OriginalSource as ActiveItem;
+            string id = Item.Icon.ToString();
+            args.Data.SetText(id);
+            args.Data.RequestedOperation = DataPackageOperation.Copy;
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

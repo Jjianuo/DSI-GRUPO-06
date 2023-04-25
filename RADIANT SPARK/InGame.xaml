@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Canvas Grid.Row="1" AllowDrop="True" Grid.RowSpan="2" DragOver="Canvas_DragOver" Drop="Canvas_Drop"/>
+        <Canvas x:Name="MiCanvas" Grid.Row="1" AllowDrop="True" Grid.RowSpan="2" DragOver="Canvas_DragOver" Drop="Canvas_Drop"/>
         <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="4"
                HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Grid>
