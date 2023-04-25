@@ -27,7 +27,7 @@ namespace RADIANT_SPARK
     {
         Manager manager;
         public ObservableCollection<ActiveItem> listaItems { get; } = new ObservableCollection<ActiveItem>();
-        public Dictionary<ActiveItem, int> items { get; } = new Dictionary<ActiveItem, int>();
+        public List<ActiveItem> items { get; } = new List<ActiveItem>();
         public InGame()
         {
             this.InitializeComponent();
@@ -87,16 +87,16 @@ namespace RADIANT_SPARK
 
             // Cosntruye las listas de ModelView a partir de la listaModelo 
             if (manager.CurrentBoughtItems != null)
-                foreach (KeyValuePair<ActiveItem, int> boughtItem in manager.CurrentBoughtItems)
+                foreach (ActiveItem boughtItem in manager.CurrentBoughtItems)
                 {
-                    this.items.Add(boughtItem.Key, boughtItem.Value);
+                    this.items.Add(boughtItem);
                 }
             base.OnNavigatedTo(e);
         }
 
         private void ListView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
         {
-            ActiveItem Item = e.Items[0] as ActiveItem;
+            ActiveItem Item = e.Items[0]  as ActiveItem;
             int id = Item.Id;
             e.Data.SetText(id.ToString());
             e.Data.RequestedOperation = DataPackageOperation.Copy;

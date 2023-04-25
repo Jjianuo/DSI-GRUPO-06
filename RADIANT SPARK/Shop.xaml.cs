@@ -121,9 +121,7 @@ namespace RADIANT_SPARK
                 moneyText = "Dinero actual: " + money.ToString() + "€";
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(moneyText)));
-            if (!manager.CurrentBoughtItems.TryAdd(lastClicked, 1)) {
-                manager.CurrentBoughtItems[lastClicked] += 1;
-            }
+            manager.CurrentBoughtItems.Add(lastClicked);
         }
 
         private void Back_click(object sender, RoutedEventArgs e)
