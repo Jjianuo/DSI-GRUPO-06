@@ -55,7 +55,7 @@ namespace RADIANT_SPARK
             var id = await e.DataView.GetTextAsync();
             var num = int.Parse(id);
 
-            ActiveItem Item = listaItems[num];
+            ActiveItem Item = items[num];
 
             var img = new Image();
             img.Source = Item.IconImg;
