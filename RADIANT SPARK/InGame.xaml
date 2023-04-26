@@ -15,9 +15,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Canvas x:Name="MiCanvas" Grid.Row="1" AllowDrop="True" Grid.RowSpan="2" DragOver="Canvas_DragOver" Drop="Canvas_Drop"/>
-        <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="4"
-               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Canvas x:Name="MiCanvas" Grid.Row="1" AllowDrop="True" Grid.RowSpan="4" DragOver="Canvas_DragOver" Drop="Canvas_Drop"/>
+        <Image Source="Assets/squares.png" Stretch="UniformToFill" Grid.RowSpan="4" DragOver="Canvas_DragOver"
+               HorizontalAlignment="Center" VerticalAlignment="Center" AllowDrop="True" Drop="Canvas_Drop"/>
         <Grid>
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left">
                 <Button Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Pause_Click">

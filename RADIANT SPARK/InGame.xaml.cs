@@ -68,14 +68,6 @@ namespace RADIANT_SPARK
             img.SetValue(Canvas.TopProperty, PD.Y);
         }
 
-        private void Button_DragStarting(UIElement sender, DragStartingEventArgs args)
-        {
-            ActiveItem Item = args.OriginalSource as ActiveItem;
-            int id = Item.Id;
-            args.Data.SetText(id.ToString());
-            args.Data.RequestedOperation = DataPackageOperation.Copy;
-        }
-
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);

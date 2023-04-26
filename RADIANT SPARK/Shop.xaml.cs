@@ -38,7 +38,7 @@ namespace RADIANT_SPARK
             this.InitializeComponent();
             this.ViewModel = new ActiveItemsViewModel();
 
-            money = 666;
+            money = 100;
             if (ApplicationLanguages.PrimaryLanguageOverride == "en-US")
                 moneyText = "Current credits: " + money.ToString() + "$";
             else if (ApplicationLanguages.PrimaryLanguageOverride == "es-ES")
