@@ -55,7 +55,8 @@ namespace RADIANT_SPARK
             var id = await e.DataView.GetTextAsync();
             var num = int.Parse(id);
 
-            ActiveItem Item = items[num];
+            //ActiveItem Item = items[num];
+            ActiveItem Item = ViewModel.Activeitems[num];
 
             var img = new Image();
             img.Source = Item.IconImg;
@@ -83,6 +84,7 @@ namespace RADIANT_SPARK
                 {
                     this.items.Add(boughtItem);
                 }
+
             base.OnNavigatedTo(e);
         }
 
