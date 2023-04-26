@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -27,7 +28,7 @@ namespace RADIANT_SPARK
     {
         Manager manager;
         public ObservableCollection<ActiveItem> listaItems { get; } = new ObservableCollection<ActiveItem>();
-        public List<ActiveItem> items { get; } = new List<ActiveItem>();
+        //public List<ActiveItem> items { get; } = new List<ActiveItem>();
         public InGame()
         {
             this.InitializeComponent();
@@ -60,10 +61,23 @@ namespace RADIANT_SPARK
 
             var img = new Image();
             img.Source = Item.IconImg;
-
             img.Width = 100;
             img.Height = 100;
             MiCanvas.Children.Add(img);
+
+            int i = 0;
+            bool found = false;
+            while(i < manager.CurrentBoughtItems.Count() && !found)
+            {
+                if (manager.CurrentBoughtItems[i].Id == Item.Id)
+                {
+                    manager.CurrentBoughtItems.RemoveAt(i);
+                    found = true;
+                }
+                ++i;
+            }
+
+            manager.CurrentBoughtItems.Remove(ViewModel.Activeitems[num]);
             Point PD = e.GetPosition(MiCanvas);
             img.SetValue(Canvas.LeftProperty, PD.X);
             img.SetValue(Canvas.TopProperty, PD.Y);
@@ -79,18 +93,18 @@ namespace RADIANT_SPARK
             }
 
             // Cosntruye las listas de ModelView a partir de la listaModelo 
-            if (manager.CurrentBoughtItems != null)
-                foreach (ActiveItem boughtItem in manager.CurrentBoughtItems)
-                {
-                    this.items.Add(boughtItem);
-                }
+            //if (manager.CurrentBoughtItems != null)
+            //    foreach (ActiveItem boughtItem in manager.CurrentBoughtItems)
+            //    {
+            //        this.items.Add(boughtItem);
+            //    }
 
             base.OnNavigatedTo(e);
         }
 
         private void ListView_DragItemsStarting(object sender, DragItemsStartingEventArgs e)
         {
-            ActiveItem Item = e.Items[0]  as ActiveItem;
+            ActiveItem Item = e.Items[0] as ActiveItem;
             int id = Item.Id;
             e.Data.SetText(id.ToString());
             e.Data.RequestedOperation = DataPackageOperation.Copy;

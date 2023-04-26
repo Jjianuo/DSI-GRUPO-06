@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace RADIANT_SPARK
 {
     public class Manager
     {
-        public List<ActiveItem> CurrentBoughtItems { get; set; }
+        public ObservableCollection<ActiveItem> CurrentBoughtItems { get; set; }
 
         public MediaPlayer mediaPlayer;
         public MediaPlayer soundPlayer;
@@ -28,7 +29,7 @@ namespace RADIANT_SPARK
         public string language;
 
         public Manager() {
-            CurrentBoughtItems = new List<ActiveItem>();
+            CurrentBoughtItems = new ObservableCollection<ActiveItem>();
 
             _clickSource = MediaSource.CreateFromUri(new Uri("ms-appx:///Sound/Click.wav"));
             _slideSource = MediaSource.CreateFromUri(new Uri("ms-appx:///Sound/Bleep_07.wav"));
